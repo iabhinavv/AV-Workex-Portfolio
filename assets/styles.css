@@ -1,3 +1,13 @@
+/* Manrope, served locally under the SIL Open Font License. */
+@font-face {
+  font-family:"Manrope";font-style:normal;font-weight:600 700;font-display:swap;
+  src:url("fonts/manrope-latin.woff2") format("woff2")
+}
+/* Use the bold face for digits, including those in regular body text. */
+@font-face {
+  font-family:"Workex Numerals";font-style:normal;font-weight:700;font-display:swap;
+  src:url("fonts/manrope-latin.woff2") format("woff2");unicode-range:U+0030-0039
+}
 /* Country Ledger typography and globe motifs, adapted to a light portfolio. */ :root {
   --void:#f5f8fa;
   --panel:rgba(255,255,255,.9);
@@ -7,8 +17,8 @@
   --muted:#4c6576;
   --amber:#9b5427;
   --cyan:#176c81;
-  --display:"Iowan Old Style","Palatino Linotype",Georgia,serif;
-  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Workex Numerals","Manrope",ui-sans-serif,system-ui,sans-serif;
+  --sans:"Workex Numerals",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:ui-monospace,"SF Mono",Menlo,monospace;
   color-scheme:light
 }
@@ -1215,7 +1225,7 @@ main {
     line-height:1.4
   }
   .stats dd {
-    font-size:1.8rem
+    font-size:clamp(1.45rem,7vw,1.8rem)
   }
 }
 /* A shared globe carries the visitor between chapters. */ .project-category {

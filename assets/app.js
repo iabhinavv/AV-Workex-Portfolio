@@ -151,9 +151,9 @@
       const labelStart=labels.length?Math.max(8,Math.min(height-8-labelSpan,(labels[0].y+labels.at(-1).y-labelSpan)/2)):0;
       labels.forEach((label,index)=>{
         const subtitle=label.highlights.join(' · ');
-        ctx.font='12px ui-monospace, Menlo, monospace';
+        ctx.font='12px "Workex Numerals", ui-monospace, Menlo, monospace';
         const nameWidth=ctx.measureText(label.name).width;
-        ctx.font='11px ui-sans-serif, system-ui, sans-serif';
+        ctx.font='11px "Workex Numerals", ui-sans-serif, system-ui, sans-serif';
         const tw=Math.max(nameWidth,ctx.measureText(subtitle).width);
         let lx=label.x<cx?label.x-tw-12:label.x+12;
         lx=Math.max(8,Math.min(width-tw-8,lx));
@@ -162,11 +162,11 @@
         labelBounds.push({name:label.name,x:lx,y:ly,width:tw,height:28});
         ctx.beginPath();ctx.moveTo(label.x,label.y);ctx.lineTo(label.x<cx?lx+tw:lx,ly+8);
         ctx.strokeStyle=label.planned?'#176c8188':label.back?'#587c8488':'#9b542788';ctx.lineWidth=.6;ctx.stroke();
-        ctx.font='12px ui-monospace, Menlo, monospace';
+        ctx.font='12px "Workex Numerals", ui-monospace, Menlo, monospace';
         ctx.lineJoin='round';ctx.lineWidth=2;ctx.strokeStyle=overSphere?'#102e3ddd':'#f5f8faee';
         ctx.strokeText(label.name,lx,ly+11);
         ctx.fillStyle=overSphere?(label.planned?'#95d2e0':label.back?'#c5d5dd':'#f2d1ad'):(label.planned?'#156579':label.back?'#536e76':'#663f28');ctx.fillText(label.name,lx,ly+11);
-        ctx.font='11px ui-sans-serif, system-ui, sans-serif';
+        ctx.font='11px "Workex Numerals", ui-sans-serif, system-ui, sans-serif';
         ctx.strokeText(subtitle,lx,ly+25);
         ctx.fillStyle=overSphere?'#e1edf3':'#314c5d';ctx.fillText(subtitle,lx,ly+25);
       });

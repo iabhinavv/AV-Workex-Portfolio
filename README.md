@@ -70,3 +70,5 @@ The SOP builder calls the SEO builder after rendering. Change `SITE_URL` there b
 Homepage education comes from the supplied CV. Keep the IIT Madras degree marked online and in progress until its status changes.
 
 Motion uses short opacity/transform effects. Primary content remains in source HTML, with visible no-script and reduced-motion fallbacks. Each job-to-job interval has one clipped traveller, below the icon layer. The five travellers run only while the timeline is visible. Page entrances and scroll reveals run together, with brief staggered delays. Reduced-motion preferences disable these effects. Certificate issue dates are intentionally omitted; education uses plain entries rather than panels.
+
+Headings and numeric typography use locally hosted Manrope (600 for headings and 700 for numbers). Font files and the SIL Open Font License are in `assets/fonts/`, sourced from Google Fonts. The Affiliate Network chapter separates website-inventory project leadership from $100K in agrotech project assets managed.

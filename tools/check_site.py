@@ -66,3 +66,11 @@ assert 'ca-firm-sop.html' in (ROOT / 'ca-article.html').read_text()
 assert 'gwo-sevo-sop.html' in (ROOT / 'gwo-sevo.html').read_text()
 assert sum(p.read_text().count('Shoogloo') for p in ROOT.glob('*.html')) == 1
 print(f'Passed: {len(pages)} HTML pages, local routes, fragments, assets, privacy and content checks.')
+
+consulting = (ROOT / 'consulting.html').read_text()
+assert '$450K' not in consulting
+assert '<dt>Agrotech assets managed</dt><dd>$100K</dd>' in consulting
+for term in ['coupon','UK train-ticket','booking engines','credit-card comparison','website-inventory']:
+    assert term in consulting, term
+for name in ['manrope-latin.woff2']:
+    assert (ROOT / 'assets/fonts' / name).read_bytes()[:4] == b'wOF2'

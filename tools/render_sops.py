@@ -41,7 +41,7 @@ def render(slug, page, name, title, description, source_slug=None, attribution=N
 <title>{escape(name)} — {escape(title)} SOP | Abhinav’s Workex</title>
 <meta name="description" content="{escape(description, quote=True)}">
 <link rel="icon" href="assets/abhinav-portrait.png" type="image/png">
-<link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/themes.css">
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/themes.css">
 <script defer src="assets/menu.js"></script><script defer src="assets/motion.js"></script>
 </head><body data-page="{page}">
 <a class="skip-link" href="#main">Skip to content</a><div class="sky" aria-hidden="true"></div>{header}
