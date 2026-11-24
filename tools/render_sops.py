@@ -42,7 +42,7 @@ def render(slug, page, name, title, description, source_slug=None, attribution=N
 <meta name="description" content="{escape(description, quote=True)}">
 <link rel="icon" href="assets/abhinav-portrait.png" type="image/png">
 <link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/themes.css">
-<script defer src="assets/menu.js"></script>
+<script defer src="assets/menu.js"></script><script defer src="assets/motion.js"></script>
 </head><body data-page="{page}">
 <a class="skip-link" href="#main">Skip to content</a><div class="sky" aria-hidden="true"></div>{header}
 <main id="main" class="wrap document-main" tabindex="-1">
@@ -68,3 +68,5 @@ def render(slug, page, name, title, description, source_slug=None, attribution=N
 if __name__ == "__main__":
     for document in DOCUMENTS:
         render(*document)
+    from seo import apply_site_seo
+    apply_site_seo()

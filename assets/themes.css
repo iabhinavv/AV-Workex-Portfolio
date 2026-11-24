@@ -199,21 +199,22 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
 .document-attribution { max-width:850px;padding:24px 0 0;font-size:.9rem;color:var(--muted) }
 
 /* Alternating career ledger: illustrations face the matching chapter cards. */
+.timeline { --timeline-gap:36px }
 .timeline:before { left:50%;top:10px;bottom:0;background:var(--line) }
 .timeline-entry {
   display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);
   grid-template-rows:auto auto;column-gap:0;row-gap:12px;
-  margin:0 0 36px;padding:0;align-items:start
+  margin:0 0 var(--timeline-gap);padding:0;align-items:start;isolation:isolate
 }
 .timeline-entry:last-child { margin-bottom:0 }
 .timeline-entry:before {
   left:calc(50% - 5px);top:7px;width:10px;height:10px;
-  border-color:var(--amber);box-shadow:0 0 0 6px var(--void)
+  border-color:var(--amber);box-shadow:0 0 0 6px var(--void);z-index:2
 }
 .timeline-entry .timeline-date { grid-column:3;grid-row:1;padding:0;font-size:.8rem;color:var(--muted) }
 .timeline-entry .experience-tile { grid-column:3;grid-row:2;min-width:0;padding:26px }
 .timeline-icon {
-  grid-column:1;grid-row:1 / 3;justify-self:center;align-self:center;
+  grid-column:1;grid-row:1 / 3;justify-self:center;align-self:center;position:relative;z-index:2;
   display:grid;place-items:center;width:132px;height:132px;
   border:1px solid var(--line);border-radius:50%;background:var(--void);color:var(--amber)
 }
@@ -226,8 +227,9 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
 .timeline-entry .tile-link { white-space:nowrap }
 .timeline-entry[data-career="hsbc"] .experience-tile { border-top:3px solid #db0011 }
 @media(max-width:740px) {
+  .timeline { --timeline-gap:30px }
   .timeline:before { left:19px;top:18px;bottom:20px }
-  .timeline-entry { grid-template-columns:40px minmax(0,1fr);column-gap:14px;row-gap:14px;margin-bottom:30px;padding:0 }
+  .timeline-entry { grid-template-columns:40px minmax(0,1fr);column-gap:14px;row-gap:14px;margin-bottom:var(--timeline-gap);padding:0 }
   .timeline-entry:before { display:none }
   .timeline-entry .timeline-date,.timeline-entry:nth-child(even) .timeline-date { grid-column:2;grid-row:1;align-self:center;padding:0;font-size:.7rem;line-height:1.6 }
   .timeline-entry .experience-tile,.timeline-entry:nth-child(even) .experience-tile { grid-column:2;grid-row:2;padding:20px 18px }
@@ -243,3 +245,72 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
   .timeline-icon,.timeline:before,.timeline-entry:before { display:none }
   .timeline-date { margin-bottom:10px }
 }
+
+/* A shorter homepage, with education immediately after the career timeline. */
+.sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0 }
+#career .timeline-note { margin:0 0 34px;font-size:.88rem }
+.education { border-top:1px solid var(--line) }
+.education h2,.capabilities>h2 { font-size:clamp(2.2rem,4vw,3.25rem);margin-bottom:30px }
+.education-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px }
+.education-entry { padding:22px 0;border-top:1px solid var(--line);min-width:0 }
+.education-grid h3 { margin:10px 0 8px;font-size:1.05rem;line-height:1.5 }
+.education-grid p { font-size:.88rem }
+.education-period { font:.76rem/1.5 var(--mono);color:var(--muted) }
+.education-status { display:inline-block;margin-top:14px;color:var(--cyan);font-size:.8rem }
+.certifications { margin-top:34px }
+.certifications h3 { font-size:1.15rem;margin:0 0 18px }
+.certificate-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;list-style:none;padding:0;margin:0 }
+.certificate { min-width:0;padding:22px 0;border-top:1px solid var(--line) }
+.certificate h4 { margin:0 0 8px;font-size:.95rem;font-weight:500;line-height:1.5;color:var(--text) }
+.certificate p { margin:0;font-size:.83rem;line-height:1.6;color:var(--secondary) }
+@media(min-width:741px) and (max-width:960px) { .certificate-grid { grid-template-columns:repeat(2,minmax(0,1fr)) } }
+.footer>.footer-summary { max-width:75ch;font-size:.88rem;margin:12px 0 20px }
+.footer>.footer-career-note { max-width:90ch;font-size:.78rem;margin:0 0 24px }
+@media(max-width:740px) {
+  .education-grid { grid-template-columns:1fr;gap:18px }
+  .certificate-grid { grid-template-columns:1fr;gap:0 }
+  .certificate { padding:19px 0 }
+  #career .timeline-note { font-size:.78rem }
+}
+
+/* One clipped traveller per job-to-job interval, below the opaque icon layer. */
+.timeline-segment {
+  position:absolute;left:50%;top:12px;width:12px;height:calc(100% + var(--timeline-gap));
+  transform:translateX(-50%);overflow:hidden;pointer-events:none;z-index:0
+}
+.timeline-particle {
+  position:absolute;inset:0;width:100%;height:100%;
+  background:radial-gradient(circle,var(--cyan) 0 3px,var(--void) 3px 5px,transparent 6px) center bottom/12px 12px no-repeat,
+    linear-gradient(transparent,var(--cyan)) center bottom 10px/2px 30px no-repeat;
+  animation:timeline-segment-flow 2.8s linear infinite;animation-play-state:paused
+}
+.timeline-active .timeline-particle { animation-play-state:running }
+.timeline-entry:nth-child(2) .timeline-particle { animation-delay:-.56s }
+.timeline-entry:nth-child(3) .timeline-particle { animation-delay:-1.12s }
+.timeline-entry:nth-child(4) .timeline-particle { animation-delay:-1.68s }
+.timeline-entry:nth-child(5) .timeline-particle { animation-delay:-2.24s }
+@keyframes timeline-segment-flow {
+  from { transform:translateY(-100%) }
+  to { transform:translateY(0) }
+}
+.motion-pending { opacity:0;transform:translateY(24px) }
+.motion-enter {
+  animation:content-arrival .62s cubic-bezier(.22,.75,.25,1) backwards;
+  animation-delay:var(--enter-delay,0ms)
+}
+@keyframes content-arrival {
+  from { opacity:0;transform:translateY(24px) }
+  to { opacity:1;transform:translateY(0) }
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+  .btn,.sop-link { transition:background-color .18s ease,border-color .18s ease,transform .18s ease }
+  .btn:hover,.sop-link:hover { transform:translateY(-2px) }
+}
+@media(max-width:740px) { .timeline-segment { left:19px;top:20px } }
+@media(prefers-reduced-motion:reduce) {
+  .motion-pending { opacity:1;transform:none }
+  .motion-enter { animation:none!important }
+  .timeline-segment { display:none }
+  .timeline-particle { animation:none }
+}
+@media print { .timeline-segment { display:none } .motion-pending { opacity:1;transform:none } }

@@ -42,9 +42,9 @@
   }
   function fadeCopy(visible){
     if(reduced.matches)return [];
-    return copySurfaces().filter(element=>element.animate).map(element=>element.animate(
-      [{opacity:visible?0:1},{opacity:visible?1:0}],
-      {duration:visible?200:140,easing:'ease-out',fill:'both'}
+    return copySurfaces().filter(element=>element.animate).map((element,index)=>element.animate(
+      [{opacity:visible?0:1,transform:visible?'translateY(20px)':'translateY(0)'},{opacity:visible?1:0,transform:'translateY(0)'}],
+      {duration:visible?360:120,delay:visible?Math.min(index,3)*30:0,easing:'cubic-bezier(.22,.75,.25,1)',fill:'both'}
     ));
   }
   function activateNavigation(id){
@@ -52,6 +52,14 @@
     document.querySelectorAll('#main-nav a').forEach(anchor=>{
       if(pageId(new URL(anchor.href))===id) anchor.setAttribute('aria-current','page');
       else anchor.removeAttribute('aria-current');
+    });
+  }
+  function syncPageMetadata(next){
+    document.title=next.title;
+    const selectors=['meta[name="description"]','meta[name="robots"]','link[rel="canonical"]','meta[property^="og:"]','meta[name^="twitter:"]','script[data-page-schema]'];
+    selectors.forEach(selector=>{
+      document.head.querySelectorAll(selector).forEach(element=>element.remove());
+      next.head.querySelectorAll(selector).forEach(element=>document.head.append(element.cloneNode(true)));
     });
   }
   async function navigate(url,{push=true,animated=true}={}){
@@ -74,7 +82,7 @@
       const outgoing=shouldAnimate?fadeCopy(false):[];
       animations.push(...outgoing);
       await Promise.all([
-        globe?.flyTo(id,{milliseconds:shouldAnimate?850:0,spin:id==='home'}),
+        globe?.flyTo(id,{milliseconds:shouldAnimate?650:0,spin:id==='home'}),
         ...outgoing.map(animation=>animation.finished.catch(()=>{}))
       ]);
       const destination=next.querySelector('#main');
@@ -85,12 +93,12 @@
       Array.from(main.children).filter(child=>child!==hero).forEach(child=>child.remove());
       main.append(...Array.from(destination.children).filter(child=>child!==nextHero));
       figure.setAttribute('aria-label',id==='home'?'Career footprint overview':groups.find(g=>g.id===id).title+' geographic footprint');
-      document.title=next.title;
-      document.querySelector('meta[name="description"]').content=next.querySelector('meta[name="description"]').content;
+      syncPageMetadata(next);
       activateNavigation(id);
       if(push&&!pendingPop)history.pushState({workex:true},'',url.href);
       globe?.resize();
       document.body.dataset.routePhase='revealing';
+      document.dispatchEvent(new Event('workex:page-ready'));
       const incoming=shouldAnimate?fadeCopy(true):[];
       animations.push(...incoming);
       await Promise.all(incoming.map(animation=>animation.finished.catch(()=>{})));

@@ -43,12 +43,18 @@ for path, page in pages.items():
         assert 'class="moon"' not in html, f'{path.name}: no moon without Earth'
 
 home = (ROOT / 'index.html').read_text()
+assert 'proof-strip' not in home
+assert not re.search(r'\$\s*\d|assets managed|revenue generated|monthly client revenue', home, re.I)
 assert 'Trained in Finance,<br>Love for numbers,<br><em>Business Driven.</em>' in home
-assert 'Abhinav Verma . Finance, Enterpreneurship &amp; Business Development.' in home
+assert 'Abhinav Verma . Finance, Entrepreneurship &amp; Business Development.' in home
 assert 'View my GitHub' in home and 'https://github.com/iabhinavv' in home
 assert 'https://iabhinavv.github.io/vayoo/' in (ROOT / 'vayoo.html').read_text()
 assert 'ca-article.html#' not in home, 'CA timeline must open the top of the career page'
 assert home.count('class="timeline-icon"') == 6
+entries = re.findall(r'<li class="timeline-entry"[^>]*>.*?</li>', home, re.S)
+assert len(entries) == 6
+assert all(entry.count('class="timeline-particle"') == 1 for entry in entries[:-1])
+assert 'timeline-particle' not in entries[-1]
 assert home.count('data-career="ca-article"') == 2
 assert home.count('href="ca-article.html"') == 3, 'Navigation and both CA timeline cards'
 for excluded in ('hsbc', 'vayoo'):

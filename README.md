@@ -16,6 +16,7 @@ Visit http://localhost:8765. The HTML, CSS, JavaScript and assets can be hosted 
 - Globe rendering: `assets/app.js`; colours are independent of career themes.
 - In-place career navigation: `assets/navigation.js`.
 - Shared mobile navigation: `assets/menu.js`.
+- Lightweight viewport entrances and the visible timeline stream: `assets/motion.js`.
 
 The CA Firm and Vayoo logos are the only company logos included. The favicon and header use the supplied portrait. Do not add HSBC, GWO SEVO or consulting-network logos without permission.
 
@@ -44,9 +45,28 @@ All three supplied Markdown files are preserved in `docs/source/`. The Affiliate
 
 ```sh
 python3 tools/check_site.py
+python3 tools/check_seo.py
 node --check assets/app.js
 node --check assets/navigation.js
 node --check assets/menu.js
+node tools/check_motion.js
 ```
 
 Also check career navigation, globe continuity, reader navigation and layouts at phone and desktop widths in a browser. Reduced-motion preferences are respected.
+
+## Search metadata
+
+The verified public base is https://iabhinavv.github.io/AV-Workex-Portfolio/. `tools/seo.py` owns page titles, descriptions, canonical links, social metadata, profile/page markup and `sitemap.xml`.
+
+```sh
+python3 tools/seo.py
+python3 tools/check_seo.py
+```
+
+The SOP builder calls the SEO builder after rendering. Change `SITE_URL` there before publishing on another domain. The two concise SOP readers share a canonical; all other useful pages retain their own. A project-level robots file is not the hostname’s root robots policy.
+
+`docs/seo-review.md` contains the findings, keyword intent map, primary sources, verification steps and the limits of the review. No search-volume, ranking, indexing or Core Web Vitals result is invented. Search-engine submission and publishing are separate actions.
+
+Homepage education comes from the supplied CV. Keep the IIT Madras degree marked online and in progress until its status changes.
+
+Motion uses short opacity/transform effects. Primary content remains in source HTML, with visible no-script and reduced-motion fallbacks. Each job-to-job interval has one clipped traveller, below the icon layer. The five travellers run only while the timeline is visible. Page entrances and scroll reveals run together, with brief staggered delays. Reduced-motion preferences disable these effects. Certificate issue dates are intentionally omitted; education uses plain entries rather than panels.
