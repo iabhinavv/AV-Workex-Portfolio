@@ -3,25 +3,10 @@
   'use strict';
   let resolveGlobe;
   window.workexGlobeReady = new Promise(resolve => { resolveGlobe = resolve; });
-  const menu = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('#main-nav');
-  menu.addEventListener('click', () => {
-    const open = menu.getAttribute('aria-expanded') !== 'true';
-    menu.setAttribute('aria-expanded', String(open));
-    nav.classList.toggle('open', open);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      menu.setAttribute('aria-expanded', 'false');
-      menu.focus();
-    }
-  });
   const canvas = document.querySelector('#globe');
   const fallback = () => {
     canvas.hidden = true;
     document.querySelector('.globe-fallback').hidden = false;
-    document.querySelector('.globe-state').textContent = 'LOCATION OVERVIEW';
   };
   const script = src => new Promise((resolve, reject) => {
     const tag = document.createElement('script');
@@ -55,7 +40,6 @@
     const land = topojson.feature(window.WORKEX_WORLD, window.WORKEX_WORLD.objects.countries);
     const graticule = d3.geoGraticule10();
     const motion = matchMedia('(prefers-reduced-motion: reduce)');
-    const caption = document.querySelector('#globe-caption');
     let width, height, radius, frame = 0, lastTime = 0, transitionStart = 0;
     let duration = 1450, complete;
     let spinning = true, paused = motion.matches, camera, target, from;
@@ -200,8 +184,6 @@
     }
     function updateMotion() {
       paused=motion.matches||!spinning;
-      document.querySelector('.globe-state').textContent=home?(paused?'STILL VIEW':'AUTO ROTATION'):'FOCUSED VIEW';
-      caption.textContent=home?'Work across businesses, markets and international entities.':page==='hsbc'?'Global insurance entities supported. Dashed rings indicate far-side pins.':page==='gwo-sevo'?'Ghana operations. Cyan rings: planned 2027 expansion.':'The places and markets connected to this work.';
       lastTime=0;schedule();
     }
     motion.addEventListener('change',updateMotion);
@@ -225,8 +207,6 @@
         spinning=spin;
         duration=motion.matches?0:milliseconds;
         transitionStart=performance.now();
-        const eyebrow=document.querySelector('.globe-top .eyebrow');
-        if(eyebrow) eyebrow.textContent=home?'One career. A wider perspective.':'The geographic footprint';
         const figure=document.querySelector('.globe-figure');
         if(figure) figure.setAttribute('aria-label',home?'Career footprint overview':groups.find(g=>g.id===id).title+' geographic footprint');
         updateMotion();

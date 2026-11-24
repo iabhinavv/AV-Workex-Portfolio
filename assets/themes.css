@@ -1,0 +1,199 @@
+/* Career palettes. Globe drawing colours live in app.js and remain independent. */
+:root {
+  --page-wash:#deedf2; --button:#1b4156; --button-hover:#20495e;
+  --surface:#102e3d; --surface-hover:#143447; --surface-text:#edf3f6;
+  --surface-secondary:#c5d5dd; --surface-muted:#afc5d1;
+  --surface-accent:#edbb91; --surface-highlight:#95d2e0;
+}
+body[data-page="ca-article"] {
+  --void:#f8fafc; --text:#003366; --secondary:#31465c; --muted:#516477;
+  --amber:#0f766e; --cyan:#0f766e; --line:#00336626; --page-wash:#ddf3ed;
+  --button:#003366; --button-hover:#0a4480; --surface:#003366; --surface-hover:#0a3d70;
+  --surface-text:#f7fbff; --surface-secondary:#d1e2ee; --surface-muted:#b5d2e1;
+  --surface-accent:#8ce6d8; --surface-highlight:#8ce6d8;
+}
+body[data-page="hsbc"] {
+  --void:#fafafa; --text:#171717; --secondary:#414141; --muted:#626262;
+  --amber:#bd0010; --cyan:#bd0010; --line:#16161626; --page-wash:#f7e3e5;
+  --button:#db0011; --button-hover:#c60010; --surface:#202020; --surface-hover:#292929;
+  --surface-text:#fff; --surface-secondary:#e2e2e2; --surface-muted:#c5c5c5;
+  --surface-accent:#ffb6be; --surface-highlight:#ffb6be;
+}
+body[data-page="vayoo"] {
+  --void:#fbf9ff; --text:#150233; --secondary:#4e3c6e; --muted:#6f5f8c;
+  --amber:#a6167f; --cyan:#49096a; --line:#49096a26; --page-wash:#f0e0f7;
+  --button:#49096a; --button-hover:#581575; --surface:#1e0163; --surface-hover:#290c6d;
+  --surface-text:#fcf9ff; --surface-secondary:#e2d7ef; --surface-muted:#c9bada;
+  --surface-accent:#dfb5f0; --surface-highlight:#b4e68a;
+}
+body[data-page="gwo-sevo"] {
+  --void:#fafcfb; --text:#0f172a; --secondary:#475569; --muted:#526577;
+  --amber:#236a37; --cyan:#0f5c2c; --line:#0f5c2c26; --page-wash:#e0efdd;
+  --button:#0f5c2c; --button-hover:#196636; --surface:#142f29; --surface-hover:#1b3931;
+  --surface-text:#f9fff9; --surface-secondary:#d2e4da; --surface-muted:#b6d1c3;
+  --surface-accent:#b6e49b; --surface-highlight:#b6e49b;
+}
+body[data-page="consulting"] { --page-wash:#eee6da }
+body { transition:background-color .3s ease,color .3s ease }
+/* A 90-second sky cycle echoes one revolution of the homepage globe. */
+.sky {
+  overflow:hidden;
+  background:radial-gradient(ellipse at 80% 14%,var(--page-wash),transparent 65%)
+}
+.sky::before {
+  content:"";position:absolute;inset:-30%;
+  background:radial-gradient(ellipse at 78% 20%,var(--page-wash),transparent 48%),
+    radial-gradient(ellipse at 22% 24%,#f3d6b74d,transparent 45%),
+    radial-gradient(ellipse at 76% 78%,#b9d9ed66,transparent 48%),
+    radial-gradient(ellipse at 18% 80%,#d7c9e866,transparent 45%);
+  -webkit-mask-image:radial-gradient(ellipse,#000 30%,transparent 68%);
+  mask-image:radial-gradient(ellipse,#000 30%,transparent 68%);
+  transform-origin:center;
+  animation:sky-revolution 90s linear infinite
+}
+/* The moon belongs to the globe section, so it scrolls away with Earth. */
+.moon {
+  position:absolute;top:8%;right:9%;width:clamp(24px,3vw,36px);
+  aspect-ratio:1;pointer-events:none;z-index:1
+}
+.moon-orbits {
+  position:absolute;inset:-40% -60%;width:220%;height:180%;
+  overflow:visible;animation:sky-revolution 90s linear infinite
+}
+.moon-orbits ellipse { fill:none;stroke:#407f9440;stroke-width:.7 }
+.moon-orbits ellipse:nth-child(2) { stroke:#9b542733 }
+.moon-orbits ellipse:nth-child(3) { stroke:#7d8b9a33 }
+.moon-sphere {
+  position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;
+  background:#d8dce4;box-shadow:0 0 15px #d8e2f030;opacity:.85
+}
+/* Repeating surface details move beneath fixed lighting for a continuous spin. */
+.moon-surface {
+  position:absolute;inset:0 auto 0 0;width:200%;height:100%;
+  background-image:radial-gradient(circle at 34% 30%,#7f8b9f60 0 9%,transparent 12%),
+    radial-gradient(circle at 62% 59%,#929dad60 0 13%,transparent 16%),
+    radial-gradient(circle at 28% 68%,#96a1b54d 0 7%,transparent 10%),
+    radial-gradient(circle at 68% 23%,#94a0b24d 0 5%,transparent 8%);
+  background-size:50% 100%;background-repeat:repeat-x;
+  animation:moon-rotation 32s linear infinite
+}
+.moon-sphere::after {
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(circle at 30% 27%,#ffffff90,transparent 52%,#34435950);
+  box-shadow:inset -7px -4px 9px #34435950
+}
+@keyframes sky-revolution {
+  from { transform:rotate(0deg) }
+  to { transform:rotate(360deg) }
+}
+@keyframes moon-rotation {
+  from { transform:translateX(0) }
+  to { transform:translateX(-50%) }
+}
+@media(prefers-reduced-motion:reduce) {
+  .sky::before,.moon-surface,.moon-orbits { animation:none }
+}
+em { color:var(--amber) }
+#main-nav a:hover,#main-nav a[aria-current] { background:var(--void);border-color:var(--line) }
+.brand-icon.portrait { width:42px;height:42px;flex:0 0 42px;overflow:hidden;border:1px solid var(--line);display:block }
+.portrait img { width:100%;height:100%;display:block;object-fit:cover;object-position:center }
+.panel,.work-card,.experience-tile {
+  --text:var(--surface-text); --secondary:var(--surface-secondary); --muted:var(--surface-muted);
+  --amber:var(--surface-accent); --cyan:var(--surface-highlight); --line:#ffffff2e;
+  background:var(--surface);color:var(--text);border-color:var(--line)
+}
+.panel em { color:var(--surface-accent) }
+.experience-tile:hover { background:var(--surface-hover);border-color:#ffffff40 }
+.btn.primary { background:var(--button);border-color:transparent;color:#fff }
+.btn.primary:hover { background:var(--button-hover);border-color:transparent;color:#fff }
+.btn:not(.primary):hover,.menu-toggle:hover { background:var(--void);border-color:var(--line) }
+.contact-panel .btn.primary { background:#eef4f6;color:var(--surface) }
+.contact-panel .btn.primary:hover { background:#e3edf1;color:var(--surface) }
+.company-mark { height:88px;display:flex;align-items:center }
+.company-mark img { display:block;max-width:160px;width:auto;max-height:88px;height:auto;object-fit:contain }
+body[data-page="ca-article"] .company-mark { height:104px }
+body[data-page="ca-article"] .company-mark img { width:104px;height:104px;max-height:104px }
+body[data-page="home"] .intro>h1 { font-size:clamp(2.6rem,4.4vw,4.7rem) }
+body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07em }
+/* Document covers are real links, with a restrained colour change on hover. */
+.documentation { padding:38px 0;border-top:1px solid var(--line) }
+.sop-link { display:grid;grid-template-columns:94px minmax(0,1fr) auto;gap:28px;align-items:center;
+  border:1px solid var(--line);border-radius:16px;padding:28px;text-decoration:none;background:#ffffffa6;
+  transition:background-color .18s ease,border-color .18s ease }
+.sop-link:hover { background:#fff;border-color:var(--amber);color:var(--text) }
+.book-cover { width:94px;height:122px;display:flex;flex-direction:column;justify-content:space-between;
+  padding:19px 15px 16px 21px;border-radius:3px 9px 9px 3px;background:var(--surface);color:var(--surface-text);
+  border-left:5px solid var(--button-hover);box-shadow:4px 4px 0 #dce2e5; font:500 .7rem/1.4 var(--mono);letter-spacing:.04em }
+.book-cover:after { content:"";display:block;height:17px;border-top:1px solid #ffffff70;border-bottom:1px solid #ffffff70 }
+.sop-link h3 { font-family:var(--display);font-size:1.8rem;letter-spacing:-.02em;margin:7px 0 9px }
+.sop-link p { max-width:660px;font-size:.94rem }
+.sop-link .read-label { color:var(--amber);font-size:.85rem;font-weight:600;white-space:nowrap }
+/* A book-like reading layout, with a compact contents drawer on phones. */
+.document-main { padding-top:128px;padding-bottom:60px }
+.document-header { max-width:950px;padding-bottom:36px;border-bottom:1px solid var(--line) }
+.document-header h1 { font-size:clamp(2.3rem,5vw,4rem);margin:22px 0 }
+.document-header .company-mark { margin-bottom:22px }
+.document-header .lede { max-width:760px }
+.document-layout { display:grid;grid-template-columns:240px minmax(0,1fr);gap:46px;align-items:start;padding-top:38px }
+.document-contents { position:sticky;top:110px;max-height:calc(100dvh - 140px);overflow:auto;padding-right:12px;font-size:.8rem;line-height:1.5 }
+.document-contents summary { cursor:pointer;font-size:.9rem;font-weight:600;padding:8px 0 16px;color:var(--amber) }
+.document-contents ul { list-style:none;margin:0;padding:0 }
+.document-contents li { margin:0 0 12px }
+.document-contents li ul { padding-left:12px;margin-top:10px }
+.document-contents a { text-decoration:none;display:block }
+.sop-content { min-width:0;max-width:850px;padding:clamp(22px,4vw,46px);border:1px solid var(--line);border-radius:8px;background:#ffffffd9 }
+.sop-content h2 { font-size:clamp(1.8rem,3vw,2.4rem);margin:52px 0 20px;scroll-margin-top:120px }
+.sop-content h2:first-of-type { margin-top:32px }
+.sop-content h3 { margin:30px 0 14px;font-size:1.15rem;scroll-margin-top:120px }
+.sop-content p,.sop-content ul,.sop-content ol { margin:0 0 20px;line-height:1.8 }
+.sop-content li { margin-bottom:8px }
+.sop-content li>ul,.sop-content li>ol { margin-top:10px }
+.sop-content a { color:var(--amber);overflow-wrap:anywhere }
+.sop-content code { font: .85em/1.6 var(--mono);background:var(--void);padding:2px 5px;overflow-wrap:anywhere }
+.sop-content pre { overflow:auto;padding:20px;background:var(--void);border:1px solid var(--line);border-radius:8px }
+.sop-content pre code { padding:0;white-space:pre;overflow-wrap:normal }
+.table-scroll { overflow:auto;margin:24px 0;max-width:100%;border:1px solid var(--line);border-radius:7px }
+.table-scroll:focus-visible { outline-offset:2px }
+.sop-content table { width:100%;min-width:560px;border-collapse:collapse;font-size:.85rem;line-height:1.6 }
+.sop-content th { background:var(--surface);color:var(--surface-text);text-align:left;font-weight:500 }
+.sop-content th,.sop-content td { padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top }
+.sop-content tr:last-child td { border:0 }
+.sop-content blockquote { border-left:3px solid var(--amber);padding-left:20px;margin:24px 0 }
+.document-return { margin-top:34px }
+@media(max-width:960px) {
+  .document-layout { grid-template-columns:1fr;gap:24px }
+  .document-contents { position:static;max-height:none;border:1px solid var(--line);border-radius:8px;padding:10px 20px }
+  .document-contents[open] { max-height:420px;overflow:auto }
+}
+@media(max-width:740px) {
+  .company-mark,.company-mark img { max-height:72px }
+  body[data-page="ca-article"] .company-mark { height:88px }
+  body[data-page="ca-article"] .company-mark img { width:88px;height:88px;max-height:88px }
+  body[data-page="home"] .intro>h1 { font-size:clamp(2.35rem,8.3vw,3.5rem) }
+  .sop-link { grid-template-columns:70px minmax(0,1fr);gap:20px;padding:22px 18px }
+  .book-cover { width:70px;height:98px;padding:14px 10px 13px 14px;font-size:.6rem }
+  .sop-link h3 { font-size:1.5rem }
+  .sop-link .read-label { grid-column:2 }
+  .sop-link p { font-size:.85rem }
+  .document-main { padding-top:110px }
+  .document-layout { padding-top:24px }
+  .sop-content { padding:22px 18px }
+  .sop-content table { font-size:.8rem }
+}
+@media(prefers-reduced-motion:reduce) { body { transition:none } }
+@media print {
+  .document-contents,.document-header .back-link,.document-return { display:none }
+  .document-main { padding-top:20px }
+  .document-layout { display:block }
+  .sop-content { max-width:none;border:0;padding:0 }
+  .table-scroll { overflow:visible }
+  .sop-content table { min-width:0 }
+}
+
+.sop-content { overflow-wrap:anywhere }
+
+.documentation .sop-link + .sop-link { margin-top:18px }
+
+.document-header > .back-link { display:table;margin-bottom:24px }
+
+.document-attribution { max-width:850px;padding:24px 0 0;font-size:.9rem;color:var(--muted) }
