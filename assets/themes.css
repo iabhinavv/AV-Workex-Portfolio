@@ -5,35 +5,35 @@
   --surface-secondary:#c5d5dd; --surface-muted:#afc5d1;
   --surface-accent:#edbb91; --surface-highlight:#95d2e0;
 }
-body[data-page="ca-article"] {
+body[data-page="ca-article"],.timeline-entry[data-career="ca-article"] {
   --void:#f8fafc; --text:#003366; --secondary:#31465c; --muted:#516477;
   --amber:#0f766e; --cyan:#0f766e; --line:#00336626; --page-wash:#ddf3ed;
   --button:#003366; --button-hover:#0a4480; --surface:#003366; --surface-hover:#0a3d70;
   --surface-text:#f7fbff; --surface-secondary:#d1e2ee; --surface-muted:#b5d2e1;
   --surface-accent:#8ce6d8; --surface-highlight:#8ce6d8;
 }
-body[data-page="hsbc"] {
+body[data-page="hsbc"],.timeline-entry[data-career="hsbc"] {
   --void:#fafafa; --text:#171717; --secondary:#414141; --muted:#626262;
   --amber:#bd0010; --cyan:#bd0010; --line:#16161626; --page-wash:#f7e3e5;
   --button:#db0011; --button-hover:#c60010; --surface:#202020; --surface-hover:#292929;
   --surface-text:#fff; --surface-secondary:#e2e2e2; --surface-muted:#c5c5c5;
   --surface-accent:#ffb6be; --surface-highlight:#ffb6be;
 }
-body[data-page="vayoo"] {
+body[data-page="vayoo"],.timeline-entry[data-career="vayoo"] {
   --void:#fbf9ff; --text:#150233; --secondary:#4e3c6e; --muted:#6f5f8c;
   --amber:#a6167f; --cyan:#49096a; --line:#49096a26; --page-wash:#f0e0f7;
   --button:#49096a; --button-hover:#581575; --surface:#1e0163; --surface-hover:#290c6d;
   --surface-text:#fcf9ff; --surface-secondary:#e2d7ef; --surface-muted:#c9bada;
   --surface-accent:#dfb5f0; --surface-highlight:#b4e68a;
 }
-body[data-page="gwo-sevo"] {
+body[data-page="gwo-sevo"],.timeline-entry[data-career="gwo-sevo"] {
   --void:#fafcfb; --text:#0f172a; --secondary:#475569; --muted:#526577;
   --amber:#236a37; --cyan:#0f5c2c; --line:#0f5c2c26; --page-wash:#e0efdd;
   --button:#0f5c2c; --button-hover:#196636; --surface:#142f29; --surface-hover:#1b3931;
   --surface-text:#f9fff9; --surface-secondary:#d2e4da; --surface-muted:#b6d1c3;
   --surface-accent:#b6e49b; --surface-highlight:#b6e49b;
 }
-body[data-page="consulting"] { --page-wash:#eee6da }
+body[data-page="consulting"],.timeline-entry[data-career="consulting"] { --page-wash:#eee6da }
 body { transition:background-color .3s ease,color .3s ease }
 /* A 90-second sky cycle echoes one revolution of the homepage globe. */
 .sky {
@@ -197,3 +197,49 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
 .document-header > .back-link { display:table;margin-bottom:24px }
 
 .document-attribution { max-width:850px;padding:24px 0 0;font-size:.9rem;color:var(--muted) }
+
+/* Alternating career ledger: illustrations face the matching chapter cards. */
+.timeline:before { left:50%;top:10px;bottom:0;background:var(--line) }
+.timeline-entry {
+  display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);
+  grid-template-rows:auto auto;column-gap:0;row-gap:12px;
+  margin:0 0 36px;padding:0;align-items:start
+}
+.timeline-entry:last-child { margin-bottom:0 }
+.timeline-entry:before {
+  left:calc(50% - 5px);top:7px;width:10px;height:10px;
+  border-color:var(--amber);box-shadow:0 0 0 6px var(--void)
+}
+.timeline-entry .timeline-date { grid-column:3;grid-row:1;padding:0;font-size:.8rem;color:var(--muted) }
+.timeline-entry .experience-tile { grid-column:3;grid-row:2;min-width:0;padding:26px }
+.timeline-icon {
+  grid-column:1;grid-row:1 / 3;justify-self:center;align-self:center;
+  display:grid;place-items:center;width:132px;height:132px;
+  border:1px solid var(--line);border-radius:50%;background:var(--void);color:var(--amber)
+}
+.timeline-icon svg { width:80px;height:80px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round }
+.timeline-icon .ca-symbol { font:italic 43px var(--display);fill:currentColor;stroke:none;letter-spacing:-6px }
+.timeline-entry:nth-child(even) .timeline-date,.timeline-entry:nth-child(even) .experience-tile { grid-column:1 }
+.timeline-entry:nth-child(even) .timeline-icon { grid-column:3 }
+.timeline-entry .tile-top { gap:8px 14px }
+.timeline-entry .tile-top .eyebrow { max-width:33ch }
+.timeline-entry .tile-link { white-space:nowrap }
+.timeline-entry[data-career="hsbc"] .experience-tile { border-top:3px solid #db0011 }
+@media(max-width:740px) {
+  .timeline:before { left:19px;top:18px;bottom:20px }
+  .timeline-entry { grid-template-columns:40px minmax(0,1fr);column-gap:14px;row-gap:14px;margin-bottom:30px;padding:0 }
+  .timeline-entry:before { display:none }
+  .timeline-entry .timeline-date,.timeline-entry:nth-child(even) .timeline-date { grid-column:2;grid-row:1;align-self:center;padding:0;font-size:.7rem;line-height:1.6 }
+  .timeline-entry .experience-tile,.timeline-entry:nth-child(even) .experience-tile { grid-column:2;grid-row:2;padding:20px 18px }
+  .timeline-icon,.timeline-entry:nth-child(even) .timeline-icon { grid-column:1;grid-row:1;width:40px;height:40px;align-self:start;justify-self:start }
+  .timeline-icon svg { width:27px;height:27px;stroke-width:2.2 }
+  .timeline-entry .experience-tile h3 { font-size:1.65rem;overflow-wrap:anywhere }
+  .timeline-entry .tile-top .eyebrow { font-size:.6rem;letter-spacing:.08em }
+  .timeline-entry .experience-tile p { font-size:.85rem;line-height:1.75 }
+  .timeline-entry .tile-bottom { flex-direction:column;gap:10px;font-size:.75rem }
+}
+@media print {
+  .timeline-entry { display:block;margin-bottom:24px }
+  .timeline-icon,.timeline:before,.timeline-entry:before { display:none }
+  .timeline-date { margin-bottom:10px }
+}

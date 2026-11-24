@@ -48,6 +48,8 @@ assert 'Abhinav Verma . Finance, Enterpreneurship &amp; Business Development.' i
 assert 'View my GitHub' in home and 'https://github.com/iabhinavv' in home
 assert 'https://iabhinavv.github.io/vayoo/' in (ROOT / 'vayoo.html').read_text()
 assert 'ca-article.html#' not in home, 'CA timeline must open the top of the career page'
+assert home.count('class="timeline-icon"') == 6
+assert home.count('data-career="ca-article"') == 2
 assert home.count('href="ca-article.html"') == 3, 'Navigation and both CA timeline cards'
 for excluded in ('hsbc', 'vayoo'):
     assert 'sop-link' not in (ROOT / f'{excluded}.html').read_text()
