@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  const targets='.timeline-entry .experience-tile,.timeline-entry .timeline-date,.work-card,.project,.locations>li,.education-entry,.certificate,.sop-link,.stats>div,.chapter-contact,.sop-content>h2,.sop-content>.table-scroll';
+  const targets='.timeline-entry .experience-tile,.timeline-entry .timeline-date,.work-card,.work-visual,.project,.locations>li,.education-entry,.certificate,.sop-link,.stats>div,.chapter-contact,.sop-content>h2,.sop-content>.table-scroll';
   let entrances,journey;
   function refresh(initial=false){
     entrances?.disconnect();

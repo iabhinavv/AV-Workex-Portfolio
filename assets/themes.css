@@ -200,7 +200,7 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
 
 /* Alternating career ledger: illustrations face the matching chapter cards. */
 .timeline { --timeline-gap:36px }
-.timeline:before { left:50%;top:10px;bottom:0;background:var(--line) }
+.timeline:before { display:none }
 .timeline-entry {
   display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);
   grid-template-rows:auto auto;column-gap:0;row-gap:12px;
@@ -228,7 +228,6 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
 .timeline-entry[data-career="hsbc"] .experience-tile { border-top:3px solid #db0011 }
 @media(max-width:740px) {
   .timeline { --timeline-gap:30px }
-  .timeline:before { left:19px;top:18px;bottom:20px }
   .timeline-entry { grid-template-columns:40px minmax(0,1fr);column-gap:14px;row-gap:14px;margin-bottom:var(--timeline-gap);padding:0 }
   .timeline-entry:before { display:none }
   .timeline-entry .timeline-date,.timeline-entry:nth-child(even) .timeline-date { grid-column:2;grid-row:1;align-self:center;padding:0;font-size:.7rem;line-height:1.6 }
@@ -273,25 +272,29 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
   #career .timeline-note { font-size:.78rem }
 }
 
-/* One clipped traveller per job-to-job interval, below the opaque icon layer. */
+/* Five two-second hand-offs; a second traveller starts when the first reaches Vayoo at six seconds. */
 .timeline-segment {
   position:absolute;left:50%;top:12px;width:12px;height:calc(100% + var(--timeline-gap));
-  transform:translateX(-50%);overflow:hidden;pointer-events:none;z-index:0
+  transform:translateX(-50%);overflow:hidden;pointer-events:none;z-index:0;
+  background:linear-gradient(var(--line),var(--line)) center/1px 100% no-repeat
 }
 .timeline-particle {
   position:absolute;inset:0;width:100%;height:100%;
   background:radial-gradient(circle,var(--cyan) 0 3px,var(--void) 3px 5px,transparent 6px) center bottom/12px 12px no-repeat,
     linear-gradient(transparent,var(--cyan)) center bottom 10px/2px 30px no-repeat;
-  animation:timeline-segment-flow 2.8s linear infinite;animation-play-state:paused
+  animation:timeline-segment-flow 12s linear infinite both;animation-play-state:paused;
+  animation-delay:var(--handoff-delay,0s)
 }
 .timeline-active .timeline-particle { animation-play-state:running }
-.timeline-entry:nth-child(2) .timeline-particle { animation-delay:-.56s }
-.timeline-entry:nth-child(3) .timeline-particle { animation-delay:-1.12s }
-.timeline-entry:nth-child(4) .timeline-particle { animation-delay:-1.68s }
-.timeline-entry:nth-child(5) .timeline-particle { animation-delay:-2.24s }
+.timeline-entry:nth-child(2) { --handoff-delay:2s }
+.timeline-entry:nth-child(3) { --handoff-delay:4s }
+.timeline-entry:nth-child(4) { --handoff-delay:6s }
+.timeline-entry:nth-child(5) { --handoff-delay:8s }
+.timeline-particle + .timeline-particle { animation-delay:calc(var(--handoff-delay,0s) + 6s) }
 @keyframes timeline-segment-flow {
-  from { transform:translateY(-100%) }
-  to { transform:translateY(0) }
+  0% { transform:translateY(-100%);opacity:1 }
+  16.6666% { transform:translateY(0);opacity:1 }
+  16.6667%,100% { transform:translateY(0);opacity:0 }
 }
 .motion-pending { opacity:0;transform:translateY(24px) }
 .motion-enter {
@@ -306,14 +309,15 @@ body[data-page="home"] .intro>.eyebrow { text-transform:none;letter-spacing:.07e
   .btn,.sop-link { transition:background-color .18s ease,border-color .18s ease,transform .18s ease }
   .btn:hover,.sop-link:hover { transform:translateY(-2px) }
 }
-@media(max-width:740px) { .timeline-segment { left:19px;top:20px } }
+@media(max-width:740px) {
+  .timeline-segment { left:19px;top:20px }
+}
 @media(prefers-reduced-motion:reduce) {
   .motion-pending { opacity:1;transform:none }
   .motion-enter { animation:none!important }
-  .timeline-segment { display:none }
-  .timeline-particle { animation:none }
+  .timeline-particle { display:none;animation:none }
 }
-@media print { .timeline-segment { display:none } .motion-pending { opacity:1;transform:none } }
+@media print { .timeline { padding-bottom:0 } .timeline-segment { display:none } .motion-pending { opacity:1;transform:none } }
 
 /* Display typography for headings, dates and metrics across all page themes. */
 h1,h2,h3,h4,h5,h6 { font-family:var(--display);font-weight:600 }

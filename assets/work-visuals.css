@@ -1,0 +1,114 @@
+/* Inline vector work stories inherit the active career palette. */
+.work-visual {
+  margin:46px 0 4px;padding:34px;border:1px solid var(--line);border-radius:22px;
+  background:linear-gradient(145deg,#fff,var(--void) 68%,var(--page-wash));
+  box-shadow:0 12px 40px #102e3d06;isolation:isolate;scroll-margin-top:115px
+}
+.work-visual figcaption { max-width:760px;margin-bottom:30px }
+.visual-kicker { display:block;margin-bottom:12px;font:600 .78rem/1.5 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--amber) }
+.work-visual h2 { font-size:clamp(1.65rem,3.1vw,2.25rem);line-height:1.14;letter-spacing:-.035em;margin-bottom:14px }
+.work-visual figcaption p { font-size:1rem;line-height:1.65;max-width:68ch }
+.work-visual h3 { font-size:.95rem;line-height:1.4;letter-spacing:-.02em }
+.work-visual .visual-note { margin-top:24px;color:var(--muted);font-size:.83rem;line-height:1.6;max-width:90ch }
+.visual-icon { display:block;width:52px;height:52px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0 }
+.visual-icon-disc { display:grid;place-items:center;width:86px;height:86px;border-radius:50%;background:var(--void);border:1px solid var(--line);color:var(--amber);position:relative;z-index:1 }
+.visual-tag { display:inline-block;padding:5px 10px;border:1px solid var(--line);border-radius:20px;color:var(--amber);font-size:.78rem;line-height:1.5 }
+.visual-toolbar { display:flex;align-items:center;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line);color:var(--surface-text);background:var(--surface);font:600 .9rem/1.4 var(--display) }
+.visual-toolbar .visual-icon { width:24px;height:24px }
+.visual-toolbar .visual-tag { margin-left:auto;color:var(--surface-text);border-color:var(--surface-muted);font-family:var(--sans);font-size:.72rem }
+.visual-flow { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;gap:24px;padding:0;margin:0;position:relative }
+.visual-flow::before { content:"";position:absolute;left:43px;right:43px;top:43px;border-top:1px dashed var(--amber);opacity:.4 }
+.visual-flow li { position:relative;min-width:0 }
+.visual-flow h3 { margin:16px 0 7px }
+.visual-flow p { font-size:.88rem;line-height:1.6 }
+.compact-flow { gap:20px }
+.compact-flow .visual-icon-disc { width:58px;height:58px }
+.compact-flow .visual-icon { width:34px;height:34px }
+.compact-flow::before { left:29px;right:29px;top:29px }
+.compact-flow h3 { font-size:.86rem }
+.compact-flow p { font-size:.83rem }
+.workbook { border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff;margin-bottom:30px }
+.workbook-sheets { display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) }
+.financial-sheet { min-width:0;padding:12px 14px 16px }
+.financial-sheet+ .financial-sheet { border-left:1px solid var(--line) }
+.financial-sheet table { width:100%;border-collapse:collapse;font-size:.8rem;line-height:1.5;table-layout:fixed }
+.financial-sheet caption { text-align:left;padding:7px 0 15px;font:600 1rem/1.4 var(--display);color:var(--text) }
+.financial-sheet thead { background:var(--void);color:var(--muted) }
+.financial-sheet th,.financial-sheet td { text-align:left;padding:9px 8px;border:1px solid var(--line);overflow-wrap:break-word }
+.financial-sheet thead td { width:26px }
+.financial-sheet tbody th { font-weight:500;color:var(--text) }
+.financial-sheet td { color:var(--muted) }
+.financial-sheet .sheet-row { font-family:var(--display);font-weight:700;font-size:.72rem;text-align:center;padding:9px 3px;background:var(--void) }
+.sheet-formula { margin-top:13px;font-size:.78rem;font-weight:500;color:var(--amber) }
+.workbook-tabs { display:flex;flex-wrap:wrap;gap:0 18px;background:var(--void);border-top:1px solid var(--line);padding:10px 18px;font-size:.78rem;color:var(--muted) }
+.workbook-tabs span:first-child { color:var(--amber);font-weight:600 }
+.reporting-board { display:grid;grid-template-columns:1fr 1fr;gap:28px }
+.entity-register { border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff;align-self:start }
+.entity-register ul { margin:0;list-style:none;padding:6px 20px }
+.entity-register li { display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font:600 .88rem/1.5 var(--display) }
+.entity-register li:last-child { border-bottom:0 }
+.entity-register small { text-align:right;font:400 .78rem/1.4 var(--sans);color:var(--muted) }
+.accounting-lanes { display:flex;flex-wrap:wrap;gap:7px;margin-bottom:23px }
+.accounting-lanes span { font-size:.78rem;border-bottom:2px solid var(--line);padding-bottom:7px;color:var(--muted) }
+.vertical-flow { grid-template-columns:1fr;gap:20px }
+.vertical-flow li { display:grid;grid-template-columns:58px minmax(0,1fr);column-gap:16px;row-gap:3px;align-items:center }
+.vertical-flow .visual-icon-disc { grid-row:1/3;width:58px;height:58px }
+.vertical-flow .visual-icon { width:33px;height:33px }
+.vertical-flow h3 { margin:0;align-self:end }
+.vertical-flow p { align-self:start }
+.vertical-flow::before { left:29px;right:auto;top:29px;bottom:29px;border-top:0;border-left:1px dashed var(--amber) }
+.finance-bridge,.visual-ribbon { display:flex;align-items:center;gap:20px;margin-top:30px;border-radius:13px;background:var(--surface);color:var(--surface-text);padding:22px 24px }
+.finance-bridge .visual-icon,.visual-ribbon .visual-icon { width:42px;height:42px;color:var(--surface-highlight) }
+.finance-bridge p,.visual-ribbon p { font-size:.88rem;line-height:1.7;color:var(--surface-secondary);margin-top:7px }
+.visual-ribbon { margin-top:24px;padding:17px 22px }
+.visual-ribbon p { margin:0 }
+.affiliate-ecosystem { display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center }
+.website-inventory { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px }
+.website-card { border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#fff }
+.browser-chrome { display:flex;gap:4px;align-items:center;padding:10px;background:var(--void);border-bottom:1px solid var(--line) }
+.browser-chrome i { width:4px;height:4px;border-radius:50%;background:var(--muted);opacity:.5 }
+.browser-chrome span { width:55%;height:5px;border-radius:2px;margin-left:5px;background:var(--line) }
+.website-content { padding:20px 16px;min-height:151px }
+.website-content .visual-icon { width:45px;height:45px;color:var(--amber);margin-bottom:18px }
+.website-content h3 { font-size:.85rem }
+.affiliate-journey>.visual-tag { margin-bottom:24px }
+.network-flow { grid-template-columns:repeat(3,minmax(0,1fr));gap:32px }
+.performance-strip { margin-top:32px;padding:26px;border:1px solid var(--line);border-radius:13px;background:#fff }
+.performance-heading { margin-bottom:25px }
+.performance-heading .visual-kicker { font-size:.72rem;margin-bottom:7px }
+.performance-heading h3 { font-size:1.1rem }
+@media(max-width:740px) {
+  .work-visual { margin-top:32px;padding:24px;border-radius:17px }
+  .work-visual figcaption { margin-bottom:25px }
+  .workbook-sheets,.reporting-board,.affiliate-ecosystem { grid-template-columns:1fr }
+  .financial-sheet+ .financial-sheet { border-left:0;border-top:1px solid var(--line) }
+  .visual-toolbar { flex-wrap:wrap;padding:13px }
+  .visual-toolbar .visual-tag { margin-left:0 }
+  .visual-flow:not(.vertical-flow) { grid-template-columns:1fr;gap:23px }
+  .visual-flow:not(.vertical-flow) li { display:grid;grid-template-columns:58px minmax(0,1fr);column-gap:16px;row-gap:3px;align-items:center }
+  .visual-flow:not(.vertical-flow) .visual-icon-disc { grid-row:1/3;width:58px;height:58px }
+  .visual-flow:not(.vertical-flow) .visual-icon { width:34px;height:34px }
+  .visual-flow:not(.vertical-flow) h3 { margin:0;align-self:end }
+  .visual-flow:not(.vertical-flow) p { align-self:start }
+  .visual-flow:not(.vertical-flow)::before { left:29px;right:auto;top:29px;bottom:29px;border-top:0;border-left:1px dashed var(--amber) }
+  .finance-bridge,.visual-ribbon { padding:19px;align-items:flex-start;gap:14px }
+  .finance-bridge .visual-icon,.visual-ribbon .visual-icon { width:30px;height:30px }
+  .website-content { padding:16px 13px;min-height:144px }
+  .performance-strip { padding:21px }
+}
+@media(max-width:380px) {
+  .work-visual { padding:20px 15px }
+  .financial-sheet { padding:10px 8px 14px }
+  .financial-sheet th,.financial-sheet td { padding:9px 5px;font-size:.76rem }
+  .financial-sheet thead td { width:21px }
+  .entity-register ul { padding:4px 13px }
+  .entity-register li { align-items:flex-start;font-size:.82rem;gap:10px }
+  .website-inventory { grid-template-columns:1fr }
+  .website-content { display:flex;align-items:center;gap:15px;min-height:98px }
+  .website-content .visual-icon { margin:0;width:36px;height:36px }
+  .workbook-tabs { gap:8px 14px;padding:10px 13px }
+}
+@media print {
+  .work-visual { break-inside:avoid;background:#fff;box-shadow:none }
+  .work-visual,.work-visual * { color:#111!important }
+}

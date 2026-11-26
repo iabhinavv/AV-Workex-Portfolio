@@ -53,8 +53,9 @@ assert 'ca-article.html#' not in home, 'CA timeline must open the top of the car
 assert home.count('class="timeline-icon"') == 6
 entries = re.findall(r'<li class="timeline-entry"[^>]*>.*?</li>', home, re.S)
 assert len(entries) == 6
-assert all(entry.count('class="timeline-particle"') == 1 for entry in entries[:-1])
+assert all(entry.count('class="timeline-particle"') == 2 for entry in entries[:-1])
 assert 'timeline-particle' not in entries[-1]
+assert 'timeline-continuation' not in home
 assert home.count('data-career="ca-article"') == 2
 assert home.count('href="ca-article.html"') == 3, 'Navigation and both CA timeline cards'
 for excluded in ('hsbc', 'vayoo'):
@@ -74,3 +75,10 @@ for term in ['coupon','UK train-ticket','booking engines','credit-card compariso
     assert term in consulting, term
 for name in ['manrope-latin.woff2']:
     assert (ROOT / 'assets/fonts' / name).read_bytes()[:4] == b'wOF2'
+
+for slug in ['ca-article','hsbc','vayoo','consulting','gwo-sevo']:
+    html = (ROOT / f'{slug}.html').read_text()
+    assert html.count('class="work-visual ') == 1, slug
+    assert html.index('id="responsibilities"') < html.index('id="work-visual"') < html.index('id="projects"'), slug
+    assert '<figcaption>' in html and 'class="visual-note"' in html, slug
+    assert 'assets/work-visuals.css' in html, slug
