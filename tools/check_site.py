@@ -61,7 +61,7 @@ assert home.count('href="ca-article.html"') == 3, 'Navigation and both CA timeli
 for excluded in ('hsbc', 'vayoo'):
     assert 'sop-link' not in (ROOT / f'{excluded}.html').read_text()
 assert 'affiliate-network-sop.html' in (ROOT / 'consulting.html').read_text()
-assert 'Originally prepared for GWO SEVO' in (ROOT / 'affiliate-network-sop.html').read_text()
+assert 'Process reference: GWO SEVO' in (ROOT / 'affiliate-network-sop.html').read_text()
 assert 'data-page="consulting"' in (ROOT / 'affiliate-network-sop.html').read_text()
 assert 'ca-firm-sop.html' in (ROOT / 'ca-article.html').read_text()
 assert 'gwo-sevo-sop.html' in (ROOT / 'gwo-sevo.html').read_text()

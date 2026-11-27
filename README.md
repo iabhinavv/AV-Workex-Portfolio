@@ -12,7 +12,8 @@ Visit http://localhost:8765. The HTML, CSS, JavaScript and assets can be hosted 
 
 - Career copy and timelines: the six root career HTML files.
 - Layout and responsive styles: `assets/styles.css`.
-- Career colours, portrait framing and document reader: `assets/themes.css`.
+- Career colours and portrait framing: `assets/themes.css`.
+- SOP reading controls and print layout: `assets/sop-reader.js` and `assets/sop-reader.css`.
 - Globe rendering: `assets/app.js`; colours are independent of career themes.
 - In-place career navigation: `assets/navigation.js`.
 - Shared mobile navigation: `assets/menu.js`.
@@ -22,7 +23,7 @@ The CA Firm and Vayoo logos are the only company logos included. The favicon and
 
 ## Rebuilding documentation
 
-The supplied Markdown lives in `docs/source/`. Generated SOP HTML is saved as ordinary static pages, so visitors need no Markdown library.
+The concise, editable SOP Markdown lives in `docs/source/`. The builder creates static HTML readers and complete branded PDFs in `assets/pdfs/`. Visitors need no document library or account.
 
 ```sh
 python3 -m venv /tmp/workex-docs-env
@@ -30,16 +31,16 @@ python3 -m venv /tmp/workex-docs-env
 /tmp/workex-docs-env/bin/python tools/render_sops.py
 ```
 
-`render_sops.py` generates contents links, scrollable keyboard-accessible tables and the matching career theme. It checks internal document anchors during generation. To add another supplied SOP, put its Markdown in `docs/source/`, add its entry to `DOCUMENTS`, rebuild, and add its document card to the relevant career page.
+`render_sops.py` generates contents links, collapsed detail sections, keyboard-accessible tables and the matching career theme. It also builds PDF copies through `tools/sop_pdf.py` and checks document anchors. To add another supplied SOP, put its Markdown in `docs/source/`, add its entry to `DOCUMENTS`, rebuild, and add its document card to the relevant career page.
 
 ## Documentation coverage
 
 - CA Firm: the supplied CA firm master SOP, in its navy/teal theme.
 - Affiliate Network: the supplied concise affiliate-network operations SOP, in its consulting theme. The page retains the original GWO SEVO attribution and presents it as an industry reference.
-- GWO SEVO: the detailed build record and concise operations SOP, in its green/slate theme.
+- GWO SEVO: the merchant/creator playbook and concise operations SOP, in its green/slate theme.
 - HSBC and Vayoo intentionally have no SOP links, as requested.
 
-All three supplied Markdown files are preserved in `docs/source/`. The Affiliate Network reader and GWO SEVO reader share the same concise source, avoiding duplicate Markdown copies. No new SOP content or historical project outcomes were invented.
+The three Markdown guides are condensed from the supplied material into practical steps, owners, review points and hand-offs. Longer checks use native `<details>` sections. The two affiliate-operations readers share a source; the Affiliate Network version retains a short process-reference attribution. The original attached documents remain unchanged outside this repository.
 
 ## Verification
 
@@ -50,6 +51,8 @@ node --check assets/app.js
 node --check assets/navigation.js
 node --check assets/menu.js
 node tools/check_motion.js
+node tools/check_sop_reader.js
+python3 tools/check_sops.py
 ```
 
 Also check career navigation, globe continuity, reader navigation and layouts at phone and desktop widths in a browser. Reduced-motion preferences are respected.
@@ -75,3 +78,5 @@ Headings and numeric typography use locally hosted Manrope (600 for headings and
 
 
 Each career page includes a responsive vector workflow between responsibilities and projects, styled by `assets/work-visuals.css`. The diagrams are ordinary HTML, accessible tables and decorative inline SVGs; they need no chart library. CA Firm and affiliate diagrams use the supplied SOPs. HSBC and Vayoo use the confirmed role descriptions. Financial workpapers contain categories and supporting schedules, not fabricated client balances, and marketing flows contain no invented campaign figures.
+
+SOP readers offer Print / Save PDF, Download PDF, Expand details and Collapse details. Printing includes all checklists and restores the reader’s expansion choices afterward. The print layout and downloadable PDFs include Abhinav Verma’s watermark, name, LinkedIn, GitHub and email; PDF contact links are clickable on every page.

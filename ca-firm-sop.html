@@ -3,8 +3,9 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Audit &amp; Accounting SOP | Abhinav Verma</title>
 <link rel="icon" href="assets/abhinav-portrait.png" type="image/png">
-<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/themes.css">
-<script defer src="assets/menu.js"></script><script defer src="assets/motion.js"></script>
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/themes.css"><link rel="stylesheet" href="assets/sop-reader.css">
+<script defer src="assets/menu.js"></script><script defer src="assets/motion.js"></script><script defer src="assets/sop-reader.js"></script>
 
   <link rel="canonical" href="https://iabhinavv.github.io/AV-Workex-Portfolio/ca-firm-sop.html">
   <meta name="description" content="CA Firm operating playbook covering client records, accounting, reconciliations, audit workpapers, taxation workflows, review controls and checklists.">
@@ -33,973 +34,132 @@
 <header class="document-header">
 <a class="back-link" href="ca-article.html">Back to CA Firm</a>
 <div class="company-mark"><img src="assets/ca-firm-logo.png" alt="Anil K. Verma &amp; Associates" width="160" height="160"></div><span class="eyebrow accent">CA Firm · Documentation</span>
-<h1>Audit, accounting &amp; taxation<br><em>Operating playbook.</em></h1><p class="lede">Client files, reconciliations, audit workpapers and review controls.</p>
+<h1>Audit, accounting &amp; taxation<br><em>Operating playbook.</em></h1><p class="lede">A practical workflow for client records, book finalisation, tax compliance, audit review and file closure.</p>
+<p class="document-author">A practical process guide by <strong>Abhinav Verma</strong></p>
+<div class="document-actions" role="group" aria-label="Document actions">
+<button class="btn primary" type="button" data-sop-action="print">Print / Save PDF</button>
+<a class="btn" href="assets/pdfs/ca-firm-sop.pdf" download>Download PDF</a>
+<button class="btn" type="button" data-sop-action="expand">Expand details</button>
+<button class="btn" type="button" data-sop-action="collapse">Collapse details</button>
+</div><p class="document-print-hint">PDF copies include all checklists, my name and contact links.</p>
 </header>
 
 <div class="document-layout">
 <details class="document-contents" open><summary>In this document</summary><nav aria-label="Document contents"><div class="toc">
 <ul>
-<li><a href="#1-scope-evidence-and-source-boundary">1. Scope, evidence and source boundary</a></li>
-<li><a href="#2-practice-workstreams-reflected-in-the-archive">2. Practice workstreams reflected in the archive</a></li>
-<li><a href="#3-firm-roles-and-responsibility-gates">3. Firm roles and responsibility gates</a></li>
-<li><a href="#4-universal-client-file-and-review-controls">4. Universal client file and review controls</a></li>
-<li><a href="#5-sop-onboard-and-scope-a-client-engagement">5. SOP: Onboard and scope a client engagement</a></li>
-<li><a href="#6-sop-finalise-books-and-build-financial-statements">6. SOP: Finalise books and build financial statements</a></li>
-<li><a href="#7-sop-tds-computation-payment-and-quarterly-statements">7. SOP: TDS computation, payment and quarterly statements</a></li>
-<li><a href="#8-sop-gst-monthly-quarterly-and-year-end-compliance">8. SOP: GST monthly, quarterly and year-end compliance</a></li>
-<li><a href="#9-sop-income-tax-return-preparation-and-filing">9. SOP: Income-tax return preparation and filing</a></li>
-<li><a href="#10-sop-tax-audit-and-tax-audit-reporting">10. SOP: Tax audit and tax-audit reporting</a></li>
-<li><a href="#11-sop-statutory-financial-statement-audit">11. SOP: Statutory financial-statement audit</a></li>
-<li><a href="#12-sop-bank-concurrent-audit">12. SOP: Bank concurrent audit</a></li>
-<li><a href="#13-sop-internal-audit">13. SOP: Internal audit</a></li>
-<li><a href="#14-cross-engagement-specialist-tests-and-cautions">14. Cross-engagement specialist tests and cautions</a></li>
-<li><a href="#15-execution-checklists">15. Execution checklists</a><ul>
-<li><a href="#151-statutory-audit-final-review">15.1 Statutory audit — final review</a></li>
-<li><a href="#152-bank-concurrent-audit-report-cycle">15.2 Bank concurrent audit — report cycle</a></li>
-<li><a href="#153-internal-audit-report-cycle">15.3 Internal audit — report cycle</a></li>
-</ul>
-</li>
-<li><a href="#16-reusable-templates">16. Reusable templates</a><ul>
-<li><a href="#template-a-engagement-intake-register">Template A — Engagement intake register</a></li>
-<li><a href="#template-b-variance-and-exception-tracker">Template B — Variance and exception tracker</a></li>
-<li><a href="#template-c-workpaper-header">Template C — Workpaper header</a></li>
-<li><a href="#template-d-filing-approval-and-confirmation">Template D — Filing approval and confirmation</a></li>
-<li><a href="#template-e-audit-finding-and-remediation">Template E — Audit finding and remediation</a></li>
-</ul>
-</li>
-<li><a href="#17-operating-cadence-and-escalation">17. Operating cadence and escalation</a></li>
-<li><a href="#18-quality-assurance-and-replication-sequence">18. Quality-assurance and replication sequence</a></li>
-<li><a href="#19-source-format-register">19. Source-format register</a></li>
-<li><a href="#20-regulatory-and-technical-references">20. Regulatory and technical references</a></li>
-<li><a href="#21-source-coverage-and-publication-boundary">21. Source coverage and publication boundary</a></li>
-<li><a href="#22-firm-adoption-and-approval-record">22. Firm adoption and approval record</a></li>
+<li><a href="#start-the-engagement">Start the engagement</a></li>
+<li><a href="#finalise-the-books">Finalise the books</a></li>
+<li><a href="#prepare-tax-workings-and-returns">Prepare tax workings and returns</a></li>
+<li><a href="#carry-out-the-audit">Carry out the audit</a></li>
+<li><a href="#review-deliver-and-close">Review, deliver and close</a></li>
 </ul>
 </div>
 </nav></details>
-<article class="sop-content" aria-label="CA Firm standard operating procedure"><p><strong>Version:</strong> 1.0<br />
-<strong>Prepared:</strong> 23 November 2026<br />
-<strong>Scope:</strong> India | Client accounting, TDS, GST, income tax, tax audit, statutory audit, bank concurrent audit, and internal audit<br />
-<strong>Document owner:</strong> Engagement Partner / Firm SOP Custodian<br />
-<strong>Purpose:</strong> Convert the supplied practice formats into a controlled, repeatable CA-firm workflow with practical workpapers and sign-off gates.</p>
-<h2 id="1-scope-evidence-and-source-boundary">1. Scope, evidence and source boundary</h2>
-<p>This SOP uses the supplied <code>CAfirmSOPs.zip</code> (34 substantive files) and follows the structure of the supplied <code>GwoSevoSOPs</code> reference. It covers the work that a CA-firm team can perform using those formats, plus necessary control procedures. The archive contains 2023–2024 examples, not a complete current-law compliance manual.</p>
-<p>Throughout the SOP, three labels keep the record accurate:</p>
+<article class="sop-content" aria-label="CA Firm standard operating procedure"><p>Use one clear file trail from the client’s records to the final accounts, return or audit report. Keep the work easy to review: what was checked, what differed, how it was resolved and who approved it.</p>
+<h2 id="start-the-engagement">Start the engagement</h2>
+<ol>
+<li>Confirm the entity, period, service, deadlines, reporting framework and responsible partner. Complete the engagement letter, appointment and independence checks where required.</li>
+<li>Request the trial balance, ledgers, bank statements, previous accounts, returns and supporting schedules. Track missing items with an owner and follow-up date.</li>
+<li>Assign a preparer and reviewer. Agree the scope, sampling approach and escalation route before fieldwork starts.</li>
+</ol>
+<p><strong>Output:</strong> An agreed scope, records checklist and work allocation.</p>
+<h2 id="finalise-the-books">Finalise the books</h2>
+<ol>
+<li>Tie opening balances to the previous signed accounts. Reconcile bank accounts, receivables, payables, inventory and statutory balances.</li>
+<li>Check revenue and expense cut-off, fixed assets, depreciation, loans, interest, payroll and provisions. Record each adjustment with its reason and approval.</li>
+<li>Map the adjusted trial balance into the balance sheet, profit and loss account, cash flow statement where required, and supporting notes.</li>
+<li>Cross-check totals, comparatives and disclosures. Clear review queries before finalisation.</li>
+</ol>
+<p><strong>Review point:</strong> Every material balance should lead back to a ledger and a supporting schedule. Investigate differences; never use a balancing entry to hide them.</p>
+<details>
+<summary>Book-finalisation checklist</summary>
 <ul>
-<li><strong>Source-backed [S]:</strong> A named format, workbook, or guidance document appears in the supplied ZIP. Presence of a format does not prove that a client engagement was completed.</li>
-<li><strong>Replication standard [P]:</strong> A recommended working step, checklist, review gate, or blank template added to make the practice repeatable. It is not evidence that the original firm used the step.</li>
-<li><strong>Current-law reference [R]:</strong> Verified guidance on the relevant official portal, checked as of 23 November 2026. Applicability, dates, forms, amendments and exemptions must be rechecked for each client and filing period.</li>
+<li>Bank reconciliation: outstanding items, charges, stale entries and subsequent clearance.</li>
+<li>Receivables and payables: ageing, confirmations where needed, recoverability and unrecorded liabilities.</li>
+<li>Inventory and assets: quantities, valuation, additions, disposals and depreciation.</li>
+<li>Borrowings and dues: agreements, interest, repayments and unpaid statutory liabilities.</li>
+<li>Statements: adjusted trial balance, note references, related parties, contingencies and comparative figures.</li>
 </ul>
-<p><strong>Coverage distinction.</strong> The ZIP directly supports statutory and tax-audit engagements, GST reconciliation, income-tax representations, MSME/43B(h) work, bookkeeping and financial schedules, and audit-trail reporting. It does <strong>not</strong> include a dedicated TDS statement template, a bank concurrent-audit program, or an internal-audit program. Those procedures and checklists below are new standards [P], informed by official guidance [R].</p>
-<p><strong>Transition alert [R].</strong> The Income-tax Act, 2025 and Income-tax Rules, 2026 apply from 1 April 2026. For FY 2025–26 / AY 2026–27, the department says the old Act and tax-audit Forms 3CA/3CB/3CD continue to apply. For Tax Year 2026–27, the prescribed tax-audit filing is consolidated Form 26. The historic references in the supplied documents must therefore be reassessed before reuse. See the official Income Tax forms FAQ in Section 20.</p>
-<h2 id="2-practice-workstreams-reflected-in-the-archive">2. Practice workstreams reflected in the archive</h2>
+</details>
+<h2 id="prepare-tax-workings-and-returns">Prepare tax workings and returns</h2>
+<p>Confirm the legislation, rates, forms, filing dates and authorisation requirements for the relevant period before preparing a return.</p>
 <div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
 <thead>
 <tr>
 <th>Workstream</th>
-<th>Archived evidence [S]</th>
-<th>Repeatable output [P]</th>
+<th>Main reconciliation</th>
+<th>Completion evidence</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Engagement and acceptance</td>
-<td>Company audit and tax-audit engagement letters</td>
-<td>Signed scope, independence clearance, information request</td>
+<td>TDS</td>
+<td>Expense and payroll ledgers to deductions, challans and statements</td>
+<td>Reviewed workings, challans and filing acknowledgement</td>
 </tr>
 <tr>
-<td>Book finalisation</td>
-<td>BS/PL workbook; balance sheet, income statement and cash-flow templates</td>
-<td>Trial-balance map, draft statements and schedules</td>
+<td>GST</td>
+<td>Books to outward supplies, input-tax records, returns and portal ledgers</td>
+<td>Resolved differences, approved return and payment receipts</td>
 </tr>
 <tr>
-<td>GST review</td>
-<td>GST reconciliation workbook with eight worksheets</td>
-<td>Books–GSTR-1–GSTR-3B–ITC–cash/credit ledger bridge</td>
+<td>Income tax</td>
+<td>Financial records to income, deductions and available tax credits</td>
+<td>Approved computation, filed return and verification status</td>
 </tr>
 <tr>
 <td>Tax audit</td>
-<td>Clause 44 workbook, tax audit engagement, 40A(3), 269SS/269T certificates</td>
-<td>Clause-by-clause support, exception register, final tax-audit report</td>
-</tr>
-<tr>
-<td>MSME and trade payables</td>
-<td>MSME vendor letter, declarations, 43B(h) note and reporting scenarios</td>
-<td>Vendor classification and ageing-based payment review</td>
-</tr>
-<tr>
-<td>Audit trail</td>
-<td>Two Rule 11(g) reference notes</td>
-<td>Software inventory, edit-log testing and audit reporting conclusion</td>
-</tr>
-<tr>
-<td>Reporting and closure</td>
-<td>MRL, statutory report with CARO annexure, non-corporate report, document receipt</td>
-<td>Reviewed opinion, management representations and closed file</td>
-</tr>
-<tr>
-<td>Income-tax filing</td>
-<td>ITR representation / consent format, DSC authorisation</td>
-<td>Reconciled computation, approved return and acknowledgement</td>
-</tr>
-<tr>
-<td>Commercial or personal schedules</td>
-<td>Forecast, budgets, net worth and business-planning workbooks</td>
-<td>Optional advisory schedules, separate from assurance evidence</td>
+<td>Prescribed disclosures to books and supporting tests</td>
+<td>Reviewed schedules, authorised report and portal receipt</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="3-firm-roles-and-responsibility-gates">3. Firm roles and responsibility gates</h2>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Responsibility</th>
-<th>Evidence of completion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Engagement partner / signing CA</td>
-<td>Acceptance, independence, materiality, major judgments, final report, sign-off</td>
-<td>Approval note and signed deliverable</td>
-</tr>
-<tr>
-<td>Audit manager / review CA</td>
-<td>Planning, risk assessment, allocation, review notes, resolution of exceptions</td>
-<td>Review log with clearance date</td>
-</tr>
-<tr>
-<td>Article assistant / preparer</td>
-<td>Books and return extraction, ledgers, vouching, reconciliations, draft statements</td>
-<td>Dated workpaper, source cross-reference</td>
-</tr>
-<tr>
-<td>Tax reviewer</td>
-<td>Check legal basis, applicability, rates, limits, form/version, tax computation</td>
-<td>Independent computation/review tick</td>
-</tr>
-<tr>
-<td>GST/TDS preparer</td>
-<td>Periodic data capture, draft return, challan and portal reconciliation</td>
-<td>Draft file and challan/reconciliation evidence</td>
-</tr>
-<tr>
-<td>Client authorised signatory</td>
-<td>Completeness confirmation, approvals, portal verification/DSC and disclosures</td>
-<td>Approval record, representation, filing receipt</td>
-</tr>
-<tr>
-<td>File administrator</td>
-<td>Version control, confidential storage, retention schedule, return acknowledgements</td>
-<td>Completed file index and access log</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Segregation of duties [P]:</strong> A return/report is not filed merely because the preparer has completed the worksheet. The reviewer signs off on the draft; the client approves amounts and disclosures; only the authorised user completes the portal action. Never share OTPs, passwords or DSC keys in a workpaper or SOP.</p>
-<h2 id="4-universal-client-file-and-review-controls">4. Universal client file and review controls</h2>
-<p><strong>Input:</strong> Engagement mandate, client identity, agreed period, records and statutory profiles.<br />
-<strong>Owner:</strong> Engagement manager.<br />
-<strong>Output:</strong> Controlled file with an audit trail from source to final submission.</p>
+<p>Obtain reviewer and client approval before submission. Keep the final return, computation, payment evidence and acknowledgement together. A draft or upload alone does not complete the engagement.</p>
+<details>
+<summary>Tax-review checks</summary>
+<ul>
+<li><strong>TDS:</strong> Check payee details, payment category, applicable deduction, challan allocation, validation errors and credit/default mismatches. Track corrections separately.</li>
+<li><strong>GST:</strong> Explain turnover and input-tax differences. Review credit/debit notes, reverse charge, eligibility, reversals, place of supply and carry-forward items before filing.</li>
+<li><strong>Income tax:</strong> Check taxpayer details, income heads, losses, deductions, tax regime and credits. Resolve differences with portal information and confirm filing verification.</li>
+<li><strong>Tax audit:</strong> Maintain a disclosure tracker. Check expenditure, depreciation, cash transactions, loans, vendor classifications and payment timing against the applicable requirements.</li>
+<li>Escalate disputed treatment, non-resident transactions, missing evidence and material defaults to the partner.</li>
+</ul>
+</details>
+<h2 id="carry-out-the-audit">Carry out the audit</h2>
+<p>Set the objective and risk first, then select the test and evidence. Keep the audit programme specific to the entity and engagement.</p>
+<p><strong>Statutory audit:</strong> Document materiality and risks; test significant balances, transactions and disclosures; evaluate misstatements, estimates, going concern and subsequent events. Obtain representations and partner approval before issuing the report.</p>
+<p><strong>Bank concurrent audit:</strong> Follow the bank-approved scope. Test cash, advances, security, KYC controls, remittances and unreconciled accounts. Escalate serious exceptions promptly and validate closure evidence.</p>
+<p><strong>Internal audit:</strong> Walk through the process, map risks to controls, test samples and agree findings with management. Each finding needs a business risk, action owner, due date and follow-up test.</p>
+<details>
+<summary>Audit review and exception checklist</summary>
+<ul>
+<li>Preserve the population, sample basis and transaction references.</li>
+<li>Link each conclusion to the work performed and the evidence retained.</li>
+<li>For statutory work, assess the applicable reporting requirements and annexures independently; clear significant judgments with the signing partner.</li>
+<li>For concurrent work, carry forward unresolved observations and verify rectification before closure.</li>
+<li>For internal audit, cover the agreed purchasing, sales, treasury, inventory, payroll and access controls. Keep management disagreements visible.</li>
+<li>Discuss report wording, scope limitations and uncorrected differences with the partner before release.</li>
+</ul>
+</details>
+<h2 id="review-deliver-and-close">Review, deliver and close</h2>
 <ol>
-<li>Create a unique engagement ID; confirm legal name, PAN/TAN/GSTIN/CIN where applicable, period, scope, owner and partner.</li>
-<li>Accept the engagement only after independence/conflict, competence, statutory eligibility, appointment and written terms are cleared; use the relevant archived engagement-letter format [S].</li>
-<li>Maintain a deliverable calendar per entity and period. Confirm deadlines from official portals, notifications and extensions; do not embed last year's dates as fixed constants.</li>
-<li>Issue a written records request. Maintain the <strong>PBC register</strong>: item, period, requested date, received date, source, status, deficiency and owner.</li>
-<li>Put every working paper under <code>/ClientID/Period/Engagement/01_PBC/02_Source/03_Workpapers/04_Review/05_Final/06_Receipts</code>. Restrict access to the assigned team.</li>
-<li>Each test must show <strong>objective → source population → selection → work performed → finding → conclusion → preparer/date → reviewer/date</strong>.</li>
-<li>Keep a separate exceptions log. Do not overwrite original data or obscure a difference by plugging the balancing figure.</li>
-<li>Use a four-state workflow: <code>Not started → Prepared → Reviewed → Filed / Report issued</code>; add <code>Blocked</code> and the reason when evidence is missing.</li>
-<li>Record the exact portal submission acknowledgement and a copy of the final return/report, not just a screenshot of a draft.</li>
-<li>Close only after receipts, client communication, pending issues and file archiving are complete. Set retention in line with applicable professional/legal requirements rather than assuming one universal period.</li>
+<li>Clear preparer queries, reviewer notes and outstanding client items. Record unresolved matters and their treatment.</li>
+<li>Obtain the required approvals, representations and signatures. Use authorised access for filing and verification.</li>
+<li>Deliver the final accounts, report or return with a short completion note. State any remaining action and its deadline.</li>
+<li>Archive the final version, approvals, receipts and correspondence. Restrict access and retain the file under the firm’s retention policy.</li>
 </ol>
-<p><strong>Acceptance gate:</strong> The file can be re-performed by a reviewer without asking the original preparer where the source data or final acknowledgement sits.</p>
-<h2 id="5-sop-onboard-and-scope-a-client-engagement">5. SOP: Onboard and scope a client engagement</h2>
-<p><strong>Basis:</strong> Engagement letters, DSC authorisation and document handover certificate [S]; risk and acceptance steps [P].<br />
-<strong>Input:</strong> Client request, entity data and intended service.<br />
-<strong>Output:</strong> Approved engagement plan.</p>
-<ol>
-<li>Determine whether the assignment is bookkeeping, periodic return filing, tax audit, statutory audit, bank concurrent audit or internal audit. Draft distinct scopes where the work differs.</li>
-<li>Confirm statutory appointment or engagement authority, applicable standards, auditor eligibility and independence safeguards; identify services that may create conflict.</li>
-<li>Obtain the signed engagement letter; specify management responsibilities, records access, deliverables, fees, timelines and limitations.</li>
-<li>Request constitutional documents, previous-year reports/returns, financial statements, bank details, registrations, policies and prior observations.</li>
-<li>Confirm who will approve filings and sign reports; authenticate portal access under the client's authorisation using approved secure procedures.</li>
-<li>Prepare a deliverables calendar and a risk-ranked audit/program plan; assign preparer, reviewer and partner.</li>
-<li>If information is incomplete, record outstanding requirements and hold the related filing/reporting step until reviewed.</li>
-</ol>
-<p><strong>Source handoff:</strong> <code>Engagement Letter for Audit of Companies.docx</code>, <code>Engagement Letter Tax Audit.docx</code>, <code>DSC Authorisation Certificate.doc</code> (adapt to current authorisation requirements).</p>
-<h2 id="6-sop-finalise-books-and-build-financial-statements">6. SOP: Finalise books and build financial statements</h2>
-<p><strong>Basis:</strong> <code>00.copy of BS PL FORMAT.xlsx</code>, general balance-sheet, income-statement and cash-flow templates [S]; review methodology [P].</p>
-<ol>
-<li>Obtain opening balances, closing trial balance, ledger dump, general journal, bank statements, cashbook, fixed-asset register, debtor/creditor ageing and prior-year final figures.</li>
-<li>Verify opening balances against prior signed financial statements and record unresolved movements.</li>
-<li>Reconcile cash and all bank accounts; investigate stale cheques, old reconciling items, unrecorded fees and journal entries.</li>
-<li>Check sales/purchases to statutory reports, credit/debit notes, inventory, debtors and creditors; test period-end cut-off.</li>
-<li>Verify loans, borrowings, interest, related parties, payroll, statutory dues, depreciation, provisions and contingencies.</li>
-<li>Prepare an adjusted trial balance and a separate journal adjustment register with reason, reference and approval.</li>
-<li>Map balances to the applicable reporting framework; prepare balance sheet, statement of profit and loss, cash flows if required, notes and schedules.</li>
-<li>Cross-foot statements to the signed trial balance; check comparative balances, accounting policies, rounding, related-party disclosures and appropriate signatories.</li>
-<li>Have reviewer clear reconciliation exceptions and partner approve accounts/reporting decisions.</li>
-</ol>
-<p><strong>Acceptance:</strong> Every material financial-statement caption has a supporting lead schedule and documented review.</p>
-<h2 id="7-sop-tds-computation-payment-and-quarterly-statements">7. SOP: TDS computation, payment and quarterly statements</h2>
-<p><strong>Basis:</strong> New replication procedure [P]; Income Tax Department manuals [R]. <strong>No dedicated TDS template is in the ZIP.</strong></p>
-<p><strong>Input:</strong> Payment and payroll ledgers, vendor master, TAN/PAN, previous returns, challans, certificates and applicable tax-year rules.<br />
-<strong>Output:</strong> Approved TDS register, tax payments, filed statement and reconciliation.</p>
-<ol>
-<li>Create a period-specific TDS register: voucher/date, payee PAN, nature of payment, residential status, gross amount, relevant provision, threshold, applicable rate, deduction amount, deduction date, deposit date, challan and exception.</li>
-<li>Reconcile the register to expense ledgers, contractor/professional charges, rent, interest, commission, salary and other potentially relevant accounts. Examine capitalised payments too.</li>
-<li>Check triggering events, aggregate thresholds, lower/nil deduction certificates, PAN validity and special cases under the law applicable to <strong>the relevant tax year and payment</strong>.</li>
-<li>Compare tax actually deducted and payable to ledger balances; investigate short deduction, late deduction, reversal and missing PAN.</li>
-<li>Generate the correct tax-year challan, check the statute selected in the e-filing payment workflow, obtain client approval, and pay through an authorised channel. Download the challan/CIN.</li>
-<li>Match each deductee transaction to its challan and reconcile totals by section, period and deductee before preparing the statement.</li>
-<li>Determine the <strong>correct form for the period</strong>. The Income Tax Department identifies Form 138 (formerly 24Q) for salary/pension and Form 140 (formerly 26Q) for resident non-salary TDS under the 2025 Act. Form 141 consolidates specified PAN-based challan-cum-statements; other categories, including non-resident payments, require separate applicability checks [R].</li>
-<li>Validate through the applicable portal/utility. Resolve file-validation errors, duplicate entries, invalid PAN, challan mismatches and short-payment flags before filing.</li>
-<li>Obtain client and tax-reviewer approval of the statement summary. Submit; save filing acknowledgement, statement file, challans and correction-file history.</li>
-<li>Reconcile portal processing, defaults/justification reports and deductee credit; issue applicable certificates and file corrections where approved.</li>
-</ol>
-<p><strong>Review gates:</strong> (a) legislation/form verified; (b) ledger-to-statement match; (c) challans match; (d) no unresolved validation errors; (e) acknowledgement saved.<br />
-<strong>Escalate:</strong> Non-resident remittances, treaty positions, rate disputes, large defaults, missing records and form/date-transition ambiguity to the partner.</p>
-<h2 id="8-sop-gst-monthly-quarterly-and-year-end-compliance">8. SOP: GST monthly, quarterly and year-end compliance</h2>
-<p><strong>Basis:</strong> <code>GST Reconciliation Sheet.xlsx</code> [S], official GST portal manuals [R], additional review controls [P].</p>
-<p><strong>Input:</strong> Sales/purchase ledgers, invoice register, debit/credit notes, e-invoices, e-way bill records when applicable, bank receipts, GSTR-1, GSTR-3B, GSTR-2B, cash/credit ledgers.<br />
-<strong>Output:</strong> Approved GST workings, filed returns and period/year-end variance log.</p>
-<ol>
-<li>Confirm GSTIN, period, filing frequency/scheme, registration status and current notifications. Save data extracts with download timestamps.</li>
-<li>Populate the archived workbook's <strong>SALE FIGUERS</strong> tab by month: books vs GSTR-1 vs GSTR-3B, taxable turnover, exports and IGST/CGST/SGST; resolve each variance.</li>
-<li>Populate <strong>CREDIT NOTE</strong> and <strong>DEBIT NOTE</strong> tabs; test invoice references, reason, timing and tax effect.</li>
-<li>Populate <strong>PURCHASE FIGUERS</strong>: reconcile book-side input tax with GSTR-2B and GSTR-3B; classify unmatched, ineligible, blocked, reversed and deferred credits by evidence and law.</li>
-<li>Populate <strong>RCM</strong>; verify applicable inward and outward reverse-charge classifications, tax payment and credit eligibility.</li>
-<li>Populate <strong>TAX DEPOSITED DETAIL</strong> with CPIN/CIN, payment dates, tax head, interest and late fees; verify portal electronic cash and credit ledgers.</li>
-<li>Reconcile the workbook's <strong>SUMMARY</strong> to books, prior-period balances and filed returns. Rebuild the <strong>RATE WISE BREAKUP</strong> from transaction-level evidence using <strong>rates valid for each supply date</strong>; do not assume the 2023–24 rate rows remain comprehensive.</li>
-<li>Prepare GSTR-1/IFF where applicable from the outward-supply schedule. Review B2B/B2C classification, place of supply, amendments, exports, HSN summary and document count before filing.</li>
-<li>Prepare GSTR-3B using verified liability, ITC, reversals, RCM, tax deposits and final ledgers. GST portal guidance states that GSTR-3B generally cannot be amended after filing; do not treat draft return adjustments as permissible post-filing corrections.</li>
-<li>Obtain client approval, submit through authorised access, download both filed returns and payment receipts; update difference register and carry-forward items.</li>
-<li>At year-end, assess GSTR-9 / GSTR-9C applicability, books-to-returns bridge, reversals, missed invoices, reclassifications and annual exposure; only file when applicable and independently reviewed.</li>
-</ol>
-<p><strong>Acceptance:</strong> All differences have a reason, owner and disposition (corrected / future adjustment / disclosure / unresolved); final filed return equals the reviewed schedule.</p>
-<h2 id="9-sop-income-tax-return-preparation-and-filing">9. SOP: Income-tax return preparation and filing</h2>
-<p><strong>Basis:</strong> <code>Representation Letter for ITR.docx</code>, DSC authorisation [S]; computation and submission controls [P]; official tax-year FAQ [R].</p>
-<ol>
-<li>Confirm PAN, taxpayer category, residential status, FY/AY or Tax Year, prior-return position, audit applicability, due date and <strong>governing Act</strong>.</li>
-<li>Obtain salary certificates, interest/investment statements, capital-gains data, property/rent details, business financials, deductions, brought-forward losses, advance-tax/TDS challans and foreign income/assets information where relevant.</li>
-<li>Compare client records with Form 26AS, AIS/TIS and available portal disclosures; mark each difference with a decision and evidence.</li>
-<li>Reconcile income to financial statements, GST turnover, TDS certificates, Form 16/16A and prior-year carried-forward attributes as applicable.</li>
-<li>Prepare a computation with distinct heads of income, admissible deductions, tax regime, relief, set-off, surcharge/cess and tax credits under the applicable year’s statute; record assumptions and judgments.</li>
-<li>Select the appropriate current-year ITR form and utility. Do not assume FY 2023–24 and Tax Year 2026–27 have identical forms or provisions.</li>
-<li>Prepare the draft return and supporting schedule; reviewer independently checks PAN, form, residential status, banks/refund account, taxable income, tax credit and demand/refund.</li>
-<li>Provide the computation/draft return to the client and obtain documented approval. Use the ITR representation format as a starting point, but update its old AY, statutory references and security language.</li>
-<li>File through authorised access and approved verification method. Verify successful submission <strong>and</strong> completion of applicable e-verification/DSC steps.</li>
-<li>Download acknowledgement, complete return, computation and verification status; send a clear client completion note and monitor processing/intimations separately.</li>
-</ol>
-<p><strong>Acceptance:</strong> Signed approval and verifiable filing/e-verification status. An upload without successful verification is not marked complete.</p>
-<h2 id="10-sop-tax-audit-and-tax-audit-reporting">10. SOP: Tax audit and tax-audit reporting</h2>
-<p><strong>Basis:</strong> Tax-audit engagement letter; Clause 44 workbook; 40A(3), 269SS/269T and MSME formats [S].</p>
-<ol>
-<li>Decide applicability from current provisions and facts; confirm what financial reporting audit, if any, has been performed and by whom.</li>
-<li>Obtain tax-audit engagement letter, final books, statutory returns, fixed-asset/depreciation register, bank loans, cashbook, vendor/MSME list and relevant agreements.</li>
-<li>Map all tax-audit disclosure clauses to a <strong>clause tracker</strong> showing source, procedure, preparer, finding, reviewer and status; use the form prescribed for the specific period.</li>
-<li>Verify turnover, accounting method, capital assets, depreciation, inadmissible expenditure, payments/cash restrictions, loans/deposits and reconciliation between P&amp;L and return/computation.</li>
-<li>Use the archived <code>Clause 44 Format.xlsx</code> as a legacy expenditure/GST reconciliation starting point <strong>only where the reporting requirement remains applicable</strong>; independently check the current form's structure and disclosures.</li>
-<li>Request and verify MSME/Udyam status, supplier category, invoice dates, acceptance terms, due dates, payments and aged balances. Use <code>MSME Declaration.docx</code> and request letter as editable examples, not as conclusive evidence without corroboration.</li>
-<li>For source-era 43B(h) matters, document the chosen testing basis, completeness limits and conclusion; don't paste any of the archived sample disclaimer scenarios without partner review and a current-law mapping.</li>
-<li>Test 40A(3) and 269SS/269T issues against ledger, bank/cash entries and applicable exceptions. Management certificates are supplementary representations, <strong>not substitutes for audit evidence</strong>.</li>
-<li>Draft the prescribed audit form; for FY 2025–26 / AY 2026–27 the official department states Forms 3CA/3CB/3CD remain applicable; for Tax Year 2026–27 it identifies consolidated <strong>Form 26</strong> [R].</li>
-<li>Resolve partner review notes and report modifications; obtain client confirmation, manage the prescribed portal workflow, and retain final report, UDIN where applicable and acknowledgement.</li>
-</ol>
-<p><strong>Acceptance:</strong> Tax-audit disclosure schedule reconciles to books and supporting workpapers; legally required report version is correct for the period.</p>
-<h2 id="11-sop-statutory-financial-statement-audit">11. SOP: Statutory financial-statement audit</h2>
-<p><strong>Basis:</strong> <code>Engagement Letter for Audit of Companies.docx</code>, <code>MRL.doc</code>, statutory report with CARO annexure, non-corporate report, Rule 11(g) notes [S]; SA-based methodology [P/R].</p>
-<p><strong>Stage A — Plan and assess risk</strong></p>
-<ol>
-<li>Verify auditor appointment, eligibility and independence, applicable Act/framework, component structure, prior-year observations and engagement terms.</li>
-<li>Understand the entity, industry, IT systems, financial reporting process and controls. Set materiality/performance materiality and identify significant risks with documented rationale.</li>
-<li>Prepare audit strategy, team allocation, sampling plan, PBC list and response to assessed risks.</li>
-</ol>
-<p><strong>Stage B — Obtain evidence</strong></p>
-<ol start="4">
-<li>Perform control walkthroughs and test controls where reliance is planned; substantively test revenue, purchases, payroll, cash/bank, receivables, inventory, fixed assets, debt, related parties, statutory dues and estimates.</li>
-<li>Obtain external confirmations where appropriate; test journals, unusual transactions, period-end cut-off and management override; corroborate responses with underlying evidence.</li>
-<li>Check financial-statement disclosures, subsequent events, going concern, commitments/contingencies, directors' representations and significant subsequent adjustments.</li>
-<li>For company audits, test accounting software inventory, edit-log enablement, coverage, changes, access and preservation for <strong>Rule 11(g)</strong> reporting, guided by the archived 2024 notes and current ICAI guidance.</li>
-<li>Assess internal financial controls reporting and <strong>CARO applicability</strong> separately; do not reuse the archived 2024 report's entity-specific exemptions, thresholds or assertions without new analysis.</li>
-</ol>
-<p><strong>Stage C — Conclude and report</strong></p>
-<ol start="9">
-<li>Aggregate misstatements; assess uncorrected items, disclosure gaps and scope limitations; evaluate impact on the opinion and other reporting responsibilities.</li>
-<li>Obtain tailored management representation letter near the report date; obtain governance communication and sufficient final review evidence.</li>
-<li>Draft the applicable audit report and annexures; independently verify every assertion, entity data, dates, wording, legal reporting clauses, UDIN and signing requirements.</li>
-<li>Issue the signed report only after partner approval; archive final statements, evidence, MRL, closing checklist and delivery correspondence.</li>
-</ol>
-<p><strong>Acceptance:</strong> Risk-responsive workpapers, documented partner judgments and a report appropriate to the specific entity; no unsupported boilerplate.</p>
-<h2 id="12-sop-bank-concurrent-audit">12. SOP: Bank concurrent audit</h2>
-<p><strong>Basis:</strong> <strong>New</strong> audit program [P]. The ZIP has no bank concurrent-audit workpaper. The RBI's <strong>Commercial Banks – Concurrent Audit Directions, 2026</strong>, updated 1 October 2026, provide the current official frame for commercial banks [R]; other bank categories require their own applicable directions.</p>
-<p><strong>Purpose:</strong> Timely transaction examination and early detection of control weaknesses.<br />
-<strong>Frequency:</strong> Per the bank-approved engagement scope and reporting calendar, commonly continuous/periodic with monthly reporting where mandated by the bank.<br />
-<strong>Output:</strong> Branch/unit exception log, monthly report and closure tracker.</p>
-<ol>
-<li>Obtain the letter of appointment, <strong>bank-approved scope</strong>, covered units/processes, materiality/reporting thresholds, data access, sample rules and escalation contacts.</li>
-<li>Document independence, staff authorisation, access controls and confidentiality. Review prior reports, unresolved high-risk findings and bank/RBI circulars in force for the period.</li>
-<li>Select and record risk-based/random samples from transaction populations; preserve system-generated populations and sample parameters.</li>
-<li>Check cash and physical cash verification; large cash and unusual cash transactions; vault and dual-control procedures.</li>
-<li>Check loan sanction and delegation, disbursement, security creation/registration, end-use, drawing powers, overdue monitoring, classification, security inspection and exceptions to terms.</li>
-<li>Check KYC/AML, risk classification, account opening, staff accounts, transaction monitoring and compliance reporting against the bank's control procedures.</li>
-<li>Check remittances, clearing, RTGS/NEFT/SWIFT where relevant, bills, foreign exchange and other branch-specific activities.</li>
-<li>Reconcile suspense, sundry and parking accounts, GL/SGL and inter-branch items; review unreconciled/old entries and manual overrides.</li>
-<li>Cover non-fund-based business, cards, merchant banking, treasury, employee conduct and mis-selling wherever in the approved scope and applicable to the unit.</li>
-<li>For each exception, capture reference number, condition, policy breached, amount/exposure, cause, severity, branch response, recommended action and evidence. <strong>Immediately escalate serious fraud red flags, control failure or regulator-reportable items through the mandated route.</strong></li>
-<li>Issue the concurrent audit report to bank-designated recipients, track replies and evidence of closure; carry forward aged observations and do not mark 'rectified' without validation.</li>
-</ol>
-<p><strong>Acceptance:</strong> Population/sample traceability; timely escalation; report follows the bank's approved format, not an invented universal RBI report template.</p>
-<h2 id="13-sop-internal-audit">13. SOP: Internal audit</h2>
-<p><strong>Basis:</strong> <strong>New</strong> audit program [P]; source financial/reconciliation schedules can be reused as evidence [S]. Companies Act section 138 establishes internal-audit requirements for prescribed classes of companies [R]. For banks, use the applicable 2026 RBI internal-audit directions instead of a generic corporate program.</p>
-<p><strong>Input:</strong> Internal audit charter/engagement terms, audit universe, business process maps, policies, financial MIS, control register, prior findings.<br />
-<strong>Output:</strong> Risk-based internal audit report and action plan.</p>
-<ol>
-<li>Agree audit objectives, scope, independence, reporting line, location, period, materiality/risk thresholds and access rights.</li>
-<li>Build audit universe and risk assessment: revenue, procurement, inventory, payroll, treasury, statutory compliance, IT access, financial close, related parties and fraud vulnerabilities.</li>
-<li>Build a <strong>risk-control matrix (RCM)</strong>: risk, control objective, owner, process description, expected evidence, frequency, inherent risk and planned testing.</li>
-<li>Conduct walkthroughs and identify design gaps; select samples for operating-effectiveness testing and document the basis.</li>
-<li>Test purchase-to-pay: vendor onboarding, quotations, purchase orders, 3-way match, approvals, duplicate payments, MSME and TDS/GST controls.</li>
-<li>Test order-to-cash: customer creation, pricing, invoicing, revenue cut-off, credit limits, receivables, collections and sales-return authority.</li>
-<li>Test cash/bank/treasury: bank mandates, reconciliations, cash custody, payments, maker-checker controls and dormant account monitoring.</li>
-<li>Test inventory/physical assets: receipt/issue controls, stock counts, movement records, obsolescence, disposals and fixed-asset verification.</li>
-<li>Test payroll and HR, IT access/change logs, backups, outsourced service providers and incident escalation.</li>
-<li>Test filing completeness and book-to-return reconciliation for tax/GST/TDS as <strong>control objectives</strong>, without presenting the work as a separate statutory certification.</li>
-<li>Rate findings against a documented impact/likelihood rubric; agree owners, target dates and action evidence. Disclose management disagreement distinctly.</li>
-<li>Issue a draft for factual validation, then a final report to the agreed oversight body; retest remediation on the agreed schedule.</li>
-</ol>
-<p><strong>Acceptance:</strong> Every observation links to a test/evidence, states a business risk, and has an accountable action owner and due date.</p>
-<h2 id="14-cross-engagement-specialist-tests-and-cautions">14. Cross-engagement specialist tests and cautions</h2>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Area</th>
-<th>Recommended workpaper control</th>
-<th>Applicable archive basis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Audit trail</td>
-<td>Software list; sample edit logs; users/permissions; enabled throughout year; retention and exception assessment</td>
-<td><code>Audit Trail Info (1).docx</code>, <code>(2).docx</code></td>
-</tr>
-<tr>
-<td>MSME and 43B(h)</td>
-<td>Vendor identification, certificate status, category, invoice/payment ageing, contractual terms, reporting decision</td>
-<td>Four <code>MSME/</code> files; <code>Comments for 43B(h).docx</code></td>
-</tr>
-<tr>
-<td>Clause 44 legacy disclosure</td>
-<td>Expense population, GST registration classification, reconcile to P&amp;L and applicable form</td>
-<td><code>Clause 44 Format.xlsx</code></td>
-</tr>
-<tr>
-<td>Cash expense and loans</td>
-<td>Cashbook and bank tests, threshold/exception schedule; certificates as corroboration only</td>
-<td><code>Certificate under section 40a3.doc</code>, <code>...269SS &amp; 269T.doc</code></td>
-</tr>
-<tr>
-<td>Financial statement balances</td>
-<td>Lead schedules, prior-year bridge, evidence cross-reference</td>
-<td><code>00.copy of BS PL FORMAT.xlsx</code> and financial models</td>
-</tr>
-<tr>
-<td>Closing representations</td>
-<td>Tailored assertion list, MRL date, signatory, consistency with findings</td>
-<td><code>MRL.doc</code>; <code>Representation Letter for ITR.docx</code></td>
-</tr>
-<tr>
-<td>Final delivery</td>
-<td>Version-controlled report and itemised receipt, if physical documents returned</td>
-<td><code>Documents Certificate.doc</code></td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Important:</strong> A template containing a prewritten unqualified opinion, a categorical client confirmation or a numerical exemption is a starting layout—not audit evidence. Replace its sample dates, names and claims before it is used.</p>
-<h2 id="15-execution-checklists">15. Execution checklists</h2>
-<p>Use the companion workbook <code>CA_Firm_Execution_Checklists.xlsx</code> for individual tests, statuses, evidence references, observations and reviewer sign-offs. The following condensed checklists are the minimum supervisor review gates; detailed tests reside in the workbook.</p>
-<h3 id="151-statutory-audit-final-review">15.1 Statutory audit — final review</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Check</th>
-<th>Evidence / disposition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[ ] Independence, appointment and engagement letter cleared</td>
-<td>Partner acceptance reference</td>
-</tr>
-<tr>
-<td>[ ] Financial reporting framework, materiality and risks documented</td>
-<td>Planning memo</td>
-</tr>
-<tr>
-<td>[ ] Financial statements tied to books and prior signed balances</td>
-<td>Lead schedules and adjustment register</td>
-</tr>
-<tr>
-<td>[ ] Revenue, purchases, inventory, debtors, creditors, bank and assets tested</td>
-<td>Substantive workpapers</td>
-</tr>
-<tr>
-<td>[ ] Fraud, journal entries, estimates, going concern and subsequent events evaluated</td>
-<td>Closing memorandum</td>
-</tr>
-<tr>
-<td>[ ] Related parties, statutory dues, disclosures and commitments checked</td>
-<td>Disclosure checklist</td>
-</tr>
-<tr>
-<td>[ ] Audit trail / Rule 11(g), CARO and IFC reporting evaluated separately</td>
-<td>Legal applicability memorandum</td>
-</tr>
-<tr>
-<td>[ ] Misstatements and audit differences resolved</td>
-<td>Summary of unadjusted misstatements</td>
-</tr>
-<tr>
-<td>[ ] MRL received; report wording and UDIN checked as applicable</td>
-<td>Final signed deliverable</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="152-bank-concurrent-audit-report-cycle">15.2 Bank concurrent audit — report cycle</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Check</th>
-<th>Evidence / disposition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[ ] Bank-approved scope, period and sample design documented</td>
-<td>Engagement and sample list</td>
-</tr>
-<tr>
-<td>[ ] Cash verification and exception reporting performed</td>
-<td>Cash workpaper</td>
-</tr>
-<tr>
-<td>[ ] Loan sanction/security/end-use/monitoring checked</td>
-<td>Advance account sample</td>
-</tr>
-<tr>
-<td>[ ] KYC/AML/new account and unusual transactions tested</td>
-<td>Customer control workpaper</td>
-</tr>
-<tr>
-<td>[ ] Clearing, remittances, forex and other relevant activities tested</td>
-<td>Transaction reference log</td>
-</tr>
-<tr>
-<td>[ ] Suspense/parking/GL reconciliations tested</td>
-<td>Ageing/reconciliation workpaper</td>
-</tr>
-<tr>
-<td>[ ] High-risk incidents escalated within required time</td>
-<td>Escalation record</td>
-</tr>
-<tr>
-<td>[ ] Management replies challenged and rectifications tested</td>
-<td>Observation closure tracker</td>
-</tr>
-<tr>
-<td>[ ] Report issued in bank-mandated format</td>
-<td>Signed report and dispatch</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="153-internal-audit-report-cycle">15.3 Internal audit — report cycle</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Check</th>
-<th>Evidence / disposition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[ ] Charter/scope, audit universe and risk rating approved</td>
-<td>Audit plan</td>
-</tr>
-<tr>
-<td>[ ] Process walkthroughs and RCM prepared</td>
-<td>RCM and flow notes</td>
-</tr>
-<tr>
-<td>[ ] Procure-to-pay, order-to-cash and treasury samples tested</td>
-<td>Test files</td>
-</tr>
-<tr>
-<td>[ ] Inventory, payroll, IT and statutory controls assessed</td>
-<td>Test files</td>
-</tr>
-<tr>
-<td>[ ] Findings link risk, criterion, condition, root cause and evidence</td>
-<td>Findings sheet</td>
-</tr>
-<tr>
-<td>[ ] Draft findings fact-checked with management</td>
-<td>Response log</td>
-</tr>
-<tr>
-<td>[ ] Report approved and action owners/dates agreed</td>
-<td>Final report</td>
-</tr>
-<tr>
-<td>[ ] Previous observations retested</td>
-<td>Closure tracker</td>
-</tr>
-</tbody>
-</table></div>
-<h2 id="16-reusable-templates">16. Reusable templates</h2>
-<p>These are <strong>blank replication formats [P]</strong> that can be copied into client files. They are not representations of a real completed engagement.</p>
-<h3 id="template-a-engagement-intake-register">Template A — Engagement intake register</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Entry</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Engagement ID, client legal entity, service, period</td>
-<td>[enter]</td>
-</tr>
-<tr>
-<td>Lead CA, preparer, reviewer, client signatory</td>
-<td>[enter]</td>
-</tr>
-<tr>
-<td>Registration / tax IDs needed for the engagement</td>
-<td>[enter securely]</td>
-</tr>
-<tr>
-<td>Appointment and independence check</td>
-<td>[status + evidence]</td>
-</tr>
-<tr>
-<td>Signed engagement letter</td>
-<td>[filename + date]</td>
-</tr>
-<tr>
-<td>Target filing/report date and official due-date reference</td>
-<td>[date + URL/notification]</td>
-</tr>
-<tr>
-<td>PBC outstanding, blocker, next action</td>
-<td>[owner and date]</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="template-b-variance-and-exception-tracker">Template B — Variance and exception tracker</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Ref</th>
-<th>Process / item</th>
-<th>Book or system value</th>
-<th>Return / evidence value</th>
-<th>Difference</th>
-<th>Cause</th>
-<th>Risk</th>
-<th>Owner</th>
-<th>Action / deadline</th>
-<th>Reviewer / closure</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[ID]</td>
-<td>[GST/TDS/audit]</td>
-<td>[value]</td>
-<td>[value]</td>
-<td>[value]</td>
-<td>[explanation]</td>
-<td>[H/M/L]</td>
-<td>[name]</td>
-<td>[date]</td>
-<td>[status]</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="template-c-workpaper-header">Template C — Workpaper header</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Required content</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>WP code and audit area</td>
-<td>[e.g., SA-REV-01]</td>
-</tr>
-<tr>
-<td>Period, preparer, review date</td>
-<td>[values]</td>
-</tr>
-<tr>
-<td>Objective and relevant risk/assertion</td>
-<td>[statement]</td>
-</tr>
-<tr>
-<td>Data source and completeness check</td>
-<td>[system/export/date/total]</td>
-</tr>
-<tr>
-<td>Sample method and items selected</td>
-<td>[population, selection method, sample]</td>
-</tr>
-<tr>
-<td>Test, results, exceptions and cross-references</td>
-<td>[steps and evidence]</td>
-</tr>
-<tr>
-<td>Conclusion and reviewer disposition</td>
-<td>[clear/exception/expand work]</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="template-d-filing-approval-and-confirmation">Template D — Filing approval and confirmation</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Stage</th>
-<th>Approval control</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Draft prepared</td>
-<td>Workings complete, reconciliations attached</td>
-</tr>
-<tr>
-<td>Internal review</td>
-<td>Tax year, form, statutory applicability and amounts approved</td>
-</tr>
-<tr>
-<td>Client approval</td>
-<td>Recorded approval of amounts, disclosures and payment</td>
-</tr>
-<tr>
-<td>Filing execution</td>
-<td>Authorised portal access and valid verification</td>
-</tr>
-<tr>
-<td>Post-filing</td>
-<td>Acknowledgement, complete copy and verification/processing status archived</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="template-e-audit-finding-and-remediation">Template E — Audit finding and remediation</h3>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Finding ID</th>
-<th>Criterion / control</th>
-<th>Condition and evidence</th>
-<th>Impact and risk</th>
-<th>Cause</th>
-<th>Recommendation</th>
-<th>Responsible owner</th>
-<th>Target date</th>
-<th>Management response</th>
-<th>Closure validation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[ID]</td>
-<td>[requirement]</td>
-<td>[test result]</td>
-<td>[basis]</td>
-<td>[root cause]</td>
-<td>[action]</td>
-<td>[owner]</td>
-<td>[date]</td>
-<td>[response]</td>
-<td>[date and evidence]</td>
-</tr>
-</tbody>
-</table></div>
-<h2 id="17-operating-cadence-and-escalation">17. Operating cadence and escalation</h2>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Cadence</th>
-<th>Activity</th>
-<th>Supervisory checkpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>On client intake</td>
-<td>Eligibility, engagement, PBC and statutory calendar</td>
-<td>Partner acceptance</td>
-</tr>
-<tr>
-<td>Weekly (for active engagements)</td>
-<td>PBC outstanding, deadlines, review queries, client follow-ups</td>
-<td>Manager blocker review</td>
-</tr>
-<tr>
-<td>Each tax/GST/TDS period</td>
-<td>Extract books, reconcile, prepare, review, approve, file, archive</td>
-<td>Filing evidence and client approval</td>
-</tr>
-<tr>
-<td>Monthly or bank-prescribed cycle</td>
-<td>Concurrent transaction testing and exception report</td>
-<td>Escalations and unresolved observations</td>
-</tr>
-<tr>
-<td>Quarterly / engagement plan</td>
-<td>Internal audit control testing and remediation review</td>
-<td>Report to agreed oversight body</td>
-</tr>
-<tr>
-<td>Annual financial close</td>
-<td>Audit planning, fieldwork, completion and sign-off</td>
-<td>Partner audit-report gate</td>
-</tr>
-<tr>
-<td>Engagement closure</td>
-<td>Deliverables, return receipts, client handover, retention</td>
-<td>File-completeness review</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Escalate immediately:</strong> suspected fraud, material misstatement, statutory breach, client pressure to modify evidence, conflicting legal interpretations, independence threat, data leakage or inability to obtain sufficient evidence.</p>
-<h2 id="18-quality-assurance-and-replication-sequence">18. Quality-assurance and replication sequence</h2>
-<p><strong>Phase 1 — Set up:</strong> Create client and engagement registers; convert the archive into approved firm-controlled templates; flag obsolete dates/statutory references in each original.</p>
-<p><strong>Phase 2 — Pilot:</strong> Run one representative engagement per relevant workstream with two levels of review; record recurring defects, unclear templates and portal errors.</p>
-<p><strong>Phase 3 — Standardise:</strong> Assign workpaper IDs and required evidence fields; control report versions; provide training on GST reconciliation, TDS/ITR checks, audit trail and audit sampling.</p>
-<p><strong>Phase 4 — Monitor:</strong> Review filing timeliness, portal defaults, unresolved variances, audit review-note closure, repeat observations and delayed PBC items. Use actual measured results only—no synthetic benchmarks.</p>
-<p><strong>Release rule:</strong> Each template is marked <code>Current and approved</code>, <code>Needs update</code>, or <code>Reference only</code>; source-year forms cannot automatically be issued to a current client.</p>
-<h2 id="19-source-format-register">19. Source-format register</h2>
-<p>The following list accounts for all 34 substantive files supplied in <code>Formats/</code>. Categories mean <strong>what the file can support</strong>, not proof that an engagement was performed.</p>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Source file from ZIP</th>
-<th>Use / decision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Engagement Letter for Audit of Companies.docx</code></td>
-<td>Statutory audit acceptance — update for entity and current law</td>
-</tr>
-<tr>
-<td><code>Engagement Letter Tax Audit.docx</code></td>
-<td>Legacy tax audit acceptance — transition-year check</td>
-</tr>
-<tr>
-<td><code>Independent Auditor_s Report Format with CARO Annexure.docx</code></td>
-<td>Statutory reporting example — do not reuse opinion/exemptions</td>
-</tr>
-<tr>
-<td><code>Auditor_s Report of Non Corporate Entity.docx</code></td>
-<td>Non-corporate assurance-report example</td>
-</tr>
-<tr>
-<td><code>MRL.doc</code></td>
-<td>Management representation starting point</td>
-</tr>
-<tr>
-<td><code>Audit Trail/Audit Trail Info (1).docx</code></td>
-<td>Rule 11(g) overview and management duties</td>
-</tr>
-<tr>
-<td><code>Audit Trail/Audit Trail Info (2).docx</code></td>
-<td>Rule 11(g) auditor testing guidance</td>
-</tr>
-<tr>
-<td><code>GST Reconciliation Sheet.xlsx</code></td>
-<td>Eight-sheet GST reconciliation; core workpaper</td>
-</tr>
-<tr>
-<td><code>Clause 44 Format.xlsx</code></td>
-<td>Historical tax-audit disclosure support; map to current form</td>
-</tr>
-<tr>
-<td><code>Comments for 43B(h).docx</code></td>
-<td>Historical reporting scenarios; professional review required</td>
-</tr>
-<tr>
-<td><code>MSME/Letter to management for MSME Details.docx</code></td>
-<td>Client MSME information request</td>
-</tr>
-<tr>
-<td><code>MSME/Request Letter for MSME Registration Status.docx</code></td>
-<td>Vendor MSME status collection</td>
-</tr>
-<tr>
-<td><code>MSME/MSME Declaration.docx</code></td>
-<td>Supplier status declaration</td>
-</tr>
-<tr>
-<td><code>MSME/Reporting of 43B(h) in Tax Audit.docx</code></td>
-<td>Historical 43B(h) reporting guide</td>
-</tr>
-<tr>
-<td><code>Certificate under section 40a3.doc</code></td>
-<td>Historical management certificate, supporting only</td>
-</tr>
-<tr>
-<td><code>Certificate under section 269SS &amp; 269T.doc</code></td>
-<td>Historical loan/deposit certificate, supporting only</td>
-</tr>
-<tr>
-<td><code>Representation Letter for ITR.docx</code></td>
-<td>ITR client representations and draft approval</td>
-</tr>
-<tr>
-<td><code>DSC Authorisation Certificate.doc</code></td>
-<td>Historical DSC authorisation starting point; secure handling review</td>
-</tr>
-<tr>
-<td><code>Documents Certificate.doc</code></td>
-<td>Physical/source-record return acknowledgement</td>
-</tr>
-<tr>
-<td><code>00.copy of BS PL FORMAT.xlsx</code></td>
-<td>Financial statement and closing schedules</td>
-</tr>
-<tr>
-<td><code>balance-sheet.xlsx</code></td>
-<td>Generic balance-sheet model; adapt reporting framework</td>
-</tr>
-<tr>
-<td><code>income-statement.xlsx</code></td>
-<td>Generic income statement; financial-analysis support</td>
-</tr>
-<tr>
-<td><code>cash-flow-statement.xlsx</code></td>
-<td>Generic cash-flow model; not statutory format by default</td>
-</tr>
-<tr>
-<td><code>personal-financial-statement.xlsx</code></td>
-<td>Personal/advisory financial position, outside core compliance</td>
-</tr>
-<tr>
-<td><code>net-worth-calculator.xlsx</code></td>
-<td>Advisory/net-worth support, not an audit certification</td>
-</tr>
-<tr>
-<td><code>Retirement Calculator.xlsx</code></td>
-<td>Retirement corpus / personal planning; outside core filing and audit work</td>
-</tr>
-<tr>
-<td><code>business-budget.xlsx</code></td>
-<td>Budget advisory, not core assurance evidence</td>
-</tr>
-<tr>
-<td><code>business-plan-workbook.xlsx</code></td>
-<td>Business-plan advisory</td>
-</tr>
-<tr>
-<td><code>business-startup-costs.xlsx</code></td>
-<td>Startup cost planning</td>
-</tr>
-<tr>
-<td><code>profit-and-loss-projection.xlsx</code></td>
-<td>Forecast advisory</td>
-</tr>
-<tr>
-<td><code>sales-forecast.xlsx</code></td>
-<td>Forecast advisory</td>
-</tr>
-<tr>
-<td><code>swot-analysis.xlsx</code></td>
-<td>Strategy/advisory template</td>
-</tr>
-<tr>
-<td><code>Business model canvas.pdf</code></td>
-<td>Business-model planning, outside core filing/audit procedure</td>
-</tr>
-<tr>
-<td><code>LLP-Agreement.pdf</code></td>
-<td>Example LLP legal document; not an audit checklist</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Inventory correction rule:</strong> Filenames are historical labels; review each workbook's actual worksheets, formulas and intended entity before reusing it. The GST sheet includes a year-specific rate table and historical period headers. The source list contains no TDS, concurrent audit or internal audit procedural checklist.</p>
-<h2 id="20-regulatory-and-technical-references">20. Regulatory and technical references</h2>
-<p>Official references checked on 23 November 2026. <strong>They support the updated procedures but do not replace engagement-specific legal and professional review.</strong></p>
-<ol>
-<li><strong>Income Tax Department — Income Tax Forms / tax audit transition:</strong> <a href="https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/income-tax-forms">https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/income-tax-forms</a></li>
-<li><strong>Income Tax Department — Income Tax Returns FAQ / Act transition:</strong> <a href="https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/%20income%20tax%20returns-faq">https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/%20income%20tax%20returns-faq</a></li>
-<li><strong>Income Tax Department — Form 138 (formerly 24Q):</strong> <a href="https://www.incometax.gov.in/iec/foportal/newformpage/forms/form138-um">https://www.incometax.gov.in/iec/foportal/newformpage/forms/form138-um</a></li>
-<li><strong>Income Tax Department — Form 140 (formerly 26Q):</strong> <a href="https://www.incometax.gov.in/iec/foportal/newformpage/forms/form140-um">https://www.incometax.gov.in/iec/foportal/newformpage/forms/form140-um</a></li>
-<li><strong>Income Tax Department — Form 141 (specified challan-cum-statements):</strong> <a href="https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/form-141-faqs">https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/form-141-faqs</a></li>
-<li><strong>GST portal — GSTR-1 creation/submission:</strong> <a href="https://tutorial.gst.gov.in/userguide/returns/Creation_of_Outward_Supplies_Return_in_GSTR-1.htm">https://tutorial.gst.gov.in/userguide/returns/Creation_of_Outward_Supplies_Return_in_GSTR-1.htm</a></li>
-<li><strong>GST portal — GSTR-3B preparation/filing:</strong> <a href="https://tutorial.gst.gov.in/userguide/returns/Create_and_Submit_GSTR3B.htm">https://tutorial.gst.gov.in/userguide/returns/Create_and_Submit_GSTR3B.htm</a></li>
-<li><strong>RBI — Commercial Banks Concurrent Audit Directions, 2026, updated 1 October 2026:</strong> <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13644">https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13644</a></li>
-<li><strong>RBI — Commercial Banks Internal Audit Function Directions, 2026:</strong> <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13640">https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13640</a></li>
-<li><strong>MCA — Companies Act, 2013 (section 138 internal audit; company statutory audit provisions):</strong> <a href="https://www.mca.gov.in/Ministry/pdf/CompaniesAct2013.pdf">https://www.mca.gov.in/Ministry/pdf/CompaniesAct2013.pdf</a></li>
-<li><strong>ICAI — Implementation Guides (SA 210, SA 230, SA 580, Rule 11(g)):</strong> <a href="https://publication.icai.org/post-data/implementation-guides">https://publication.icai.org/post-data/implementation-guides</a></li>
-</ol>
-<h2 id="21-source-coverage-and-publication-boundary">21. Source coverage and publication boundary</h2>
-<p>The SOP is a training and practice-control document, <strong>not</strong> a signed tax opinion, professional audit program approved for a particular client, legal determination of filing obligations, or reproduction of current statutory forms. It does not establish that any archived draft was actually issued or filed.</p>
-<p>A responsible partner must approve the applicability of provisions, legal thresholds, actual deadlines, rate tables, mandatory forms, audit standards, reporting exceptions, branch-specific bank policy, and client signatories before the procedures are used. Blank checklists do not create evidence of work performed.</p>
-<h2 id="22-firm-adoption-and-approval-record">22. Firm adoption and approval record</h2>
-<p><strong>Replication standard [P].</strong> Before using this SOP as a live firm procedure, the engagement partner or SOP custodian should record a controlled release. This is a governance template, not a statement that approval has been obtained.</p>
-<div class="table-scroll" role="region" aria-label="Reference table" tabindex="0"><table>
-<thead>
-<tr>
-<th>Adoption control</th>
-<th>Release evidence / sign-off</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>All archived formats classified as approved, needs update or reference only</td>
-<td>[ ] Format review register completed</td>
-</tr>
-<tr>
-<td>Current-year income-tax forms, GST obligations and RBI instructions checked</td>
-<td>[ ] Applicable source and check date recorded</td>
-</tr>
-<tr>
-<td>Audit report templates reviewed against current statutory requirements and ICAI guidance</td>
-<td>[ ] Signing CA approval</td>
-</tr>
-<tr>
-<td>Maker/reviewer/client approval stages configured for filing work</td>
-<td>[ ] Access and authorisation controls approved</td>
-</tr>
-<tr>
-<td>Statutory, concurrent and internal audit programs tailored to actual engagement scope</td>
-<td>[ ] Engagement manager approval</td>
-</tr>
-<tr>
-<td>Checklist workbook piloted, with instructions and evidence references tested</td>
-<td>[ ] Trial review performed</td>
-</tr>
-<tr>
-<td>Firm staff briefed on documentation, confidentiality and escalation</td>
-<td>[ ] Training attendance / date</td>
-</tr>
-<tr>
-<td>SOP owner, revision interval and change-control log assigned</td>
-<td>[ ] Owner and next review date</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Firm-approved version:</strong> [enter]<br />
-<strong>Prepared by:</strong> [enter]<br />
-<strong>Reviewed by:</strong> [enter]<br />
-<strong>Approved by (signing partner):</strong> [enter]<br />
-<strong>Date of adoption:</strong> [enter]<br />
-<strong>Next scheduled review:</strong> [enter]</p></article>
+<details>
+<summary>Workpaper and follow-up templates</summary>
+<p><strong>Workpaper:</strong> Entity and period; objective; records tested; population and sample; work performed; result; conclusion; preparer; reviewer; date.</p>
+<p><strong>Exception tracker:</strong> Reference; issue; amount or exposure; evidence; severity; client response; action owner; due date; review status; closure evidence.</p>
+<p><strong>Filing tracker:</strong> Entity; return/report; period; reviewed amount; client approval; submission date; acknowledgement; verification status; next action.</p>
+<p><strong>Weekly review:</strong> Upcoming deadlines, missing records, high-risk findings, unresolved reconciliations and overdue client responses.</p>
+</details></article>
 </div><div class="document-return"><a class="btn" href="ca-article.html">Back to CA Firm</a></div>
 </main><footer class="footer wrap"><a class="brand footer-brand" href="index.html">Abhinav’s Workex</a><p class="footer-summary">Abhinav Verma · Finance consulting, financial modelling, business development and partnerships.</p><div><span>Abhinav Verma</span><a href="mailto:abhinaverma124@gmail.com">Email Abhinav</a><a class="" href="https://github.com/iabhinavv" target="_blank" rel="noopener noreferrer">GitHub</a><a class="" href="https://www.linkedin.com/in/iabhinavv" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
+<div class="sop-print-watermark" aria-hidden="true">ABHINAV VERMA</div>
+<footer class="sop-print-footer"><strong>Abhinav Verma · Abhinav’s Workex</strong>
+<a href="https://www.linkedin.com/in/iabhinavv">linkedin.com/in/iabhinavv</a> ·
+<a href="https://github.com/iabhinavv">github.com/iabhinavv</a> ·
+<a href="mailto:abhinaverma124@gmail.com">abhinaverma124@gmail.com</a></footer>
 </body></html>

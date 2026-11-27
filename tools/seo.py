@@ -23,11 +23,11 @@ PAGES = {
     'ca-firm-sop.html': ('Audit & Accounting SOP | Abhinav Verma',
         'CA Firm operating playbook covering client records, accounting, reconciliations, audit workpapers, taxation workflows, review controls and checklists.'),
     'gwo-sevo-sop.html': ('Affiliate & Creator Network Playbook | Abhinav Verma',
-        'A detailed affiliate and creator network build record: merchant pipelines, creator onboarding, campaign workflows, reporting and reusable operating templates.'),
+        'A concise affiliate and creator network playbook covering merchant pipelines, creator shortlists, onboarding, campaigns and reporting, with expandable checklists.'),
     'gwo-sevo-operations-sop.html': ('Affiliate Network Operations SOP | Abhinav Verma',
         'An affiliate network operations reference covering merchant acquisition, publisher onboarding, tracking, conversion validation, reporting and settlement.'),
     'affiliate-network-sop.html': ('Affiliate Operations Reference | Abhinav Verma',
-        'An affiliate operations reference originally prepared for GWO SEVO, covering merchant and publisher onboarding, campaign tracking, reporting and settlement.'),
+        'An affiliate operations guide covering merchant and publisher onboarding, tracking, reporting and settlement, with expandable checklists and a printable PDF.'),
 }
 PARENTS = {'ca-firm-sop.html': 'ca-article.html', 'gwo-sevo-sop.html': 'gwo-sevo.html',
            'gwo-sevo-operations-sop.html': 'gwo-sevo.html', 'affiliate-network-sop.html': 'consulting.html'}

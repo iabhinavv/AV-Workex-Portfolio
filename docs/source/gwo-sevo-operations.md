@@ -1,138 +1,90 @@
-# GWO SEVO | Affiliate Network Operations SOP
+# Affiliate network operations
 
-**SOP ID:** GSAN-AFF-001  
-**Version:** 1.0 (draft for internal approval)  
-**Process owner:** Business Development Lead  
-**Applies to:** Merchant acquisition, publisher/creator onboarding, campaign activation, tracking, reporting, and settlement
+Keep the commercial promise, campaign setup and settlement records connected. A campaign moves forward only when the previous hand-off is clear and the responsible person has approved it.
 
-## 1. Purpose and operating model
+## Assign the owners
 
-Run measurable affiliate campaigns by connecting **advertisers (merchants)** with relevant **publishers/creators**, attributing customer actions, and validating commissions before payment. The network coordinates onboarding, campaign rules, tracking, reporting, and settlement; the merchant supplies the offer and approves eligible outcomes; publishers drive the permitted traffic.
-
-**Core workflow:** `Merchant prospect → Discovery & signed terms → Publisher selection → Tracking test → Campaign live → Conversion validation → Merchant invoice → Publisher payout → Renewal`
-
-Separate two services during sales and delivery:
-
-- **Performance affiliate program:** Payment is linked to an agreed, validated event (such as an eligible sale, qualified lead, install, or registration).
-- **Managed creator campaign:** Payment and acceptance may instead depend on agreed content deliverables, management scope, or a documented hybrid arrangement. Do not promise performance-only pricing unless contracted.
-
-## 2. Responsibilities
-
-| Function | Accountable for | Handoff evidence |
+| Function | Owns | Hands over |
 |---|---|---|
-| Business Development (BD) | Merchant pipeline, discovery, commercials, approvals | Qualified campaign brief and approved terms |
-| Publisher / Creator Partnerships | Sourcing, identity and audience checks, availability, partner terms | Verified roster and approved partner shortlist |
-| Campaign Operations / Tracking | Campaign configuration, links, creatives, QA, monitoring | Successful end-to-end test and launch approval |
-| Reporting / Account Management | Campaign reconciliation, performance insights, issue log | Approved performance report and next actions |
-| Finance | Invoice, collections, approved commissions, payout evidence | Reconciled settlement register |
+| Business development | Merchant fit, brief and commercial terms | Approved campaign brief |
+| Partnerships | Publisher selection, checks and partner terms | Confirmed partner shortlist |
+| Campaign operations | Setup, tracking tests and live monitoring | Launch approval and activity records |
+| Reporting and finance | Validation, invoicing and payout reconciliation | Reviewed report and settlement register |
 
-*One person may perform multiple functions. Every campaign must still have a named preparer and reviewer.*
+One person may cover several functions, but every campaign needs a named preparer and reviewer.
 
-## 3. Standard procedure
+## Qualify the merchant
 
-### Step 1 — Qualify and onboard the merchant
+Confirm the product, target market, audience, objective, budget, fulfilment capacity and decision-maker. Agree the payable action or content deliverable, eligible traffic, commission or fee, attribution window, exclusions and payment terms.
 
-**Owner:** BD  
-**Input:** Merchant prospect and product/service information
+**Hand-off:** Written terms, an approved brief, merchant contact and authorised campaign assets. Keep performance-based terms distinct from fixed-fee creator work.
 
-1. Record merchant, website, country, niche, sales stage, contact route, owner, and next action in the pipeline; preserve existing records and outreach history.
-2. During discovery, confirm target market, customer profile, offer, landing page, objective, ability to fulfil orders/leads, budget, and decision-maker.
-3. Define **the payable action** (CPS, CPL, CPA, CPI, etc.), eligible geography, attribution window, commission, exclusions, validation/reversal period, invoicing, and payment terms. Use other models (e.g., CPC or CPM) only if explicitly agreed.
-4. Obtain a signed agreement or written authorization, approved campaign brief, brand guidelines, and creatives/product feed as applicable.
+<details markdown="1"><summary>Campaign brief checklist</summary>
 
-**Gate:** No campaign setup without an approved brief, commercial terms, and responsible merchant contact.
+- Merchant, campaign owner and approval contact.
+- Objective, audience, geography, offer and landing page.
+- Payable action or deliverables, rates, budget and campaign dates.
+- Attribution window, exclusions, reversals and validation period.
+- Permitted channels, creative rules, reporting frequency and settlement terms.
 
-### Step 2 — Source, verify, and activate publishers
+</details>
 
-**Owner:** Publisher / Creator Partnerships  
-**Input:** Approved brief and partner roster
+## Select and activate partners
 
-1. Select appropriate partner types: content/review sites, comparison sites, coupon/deal sites, cashback/loyalty sites, social or Telegram creators, email publishers, and approved paid-search/PPC partners.
-2. Verify publisher identity, site/social accounts, relevant geography, niche, recent content, audience evidence, traffic methods, and contact route. Record **source and date** of each material metric.
-3. Rate fit as **Direct / Adjacent / Lower / Needs review**. Request updated analytics where needed; do not treat follower count alone as reach or results.
-4. Confirm partner permissions, incentive/coupon rules, prohibited channels, brand restrictions, commission, and payment details; retain onboarding approval.
-5. Assign a unique publisher ID; distinguish **scouted**, **verified**, **approved**, and **active** partners.
+Choose publishers or creators for the audience and offer. Verify identity, channels, geography, recent content and traffic methods. Confirm current metrics, availability, permissions and partner terms before activation.
 
-**Gate:** Only approved publishers with documented terms receive live campaign links.
+**Hand-off:** Approved partners with unique IDs, agreed terms and a clear campaign instruction sheet. Keep scouted, verified, approved and active records separate.
 
-### Step 3 — Configure and test tracking
+## Configure and test tracking
 
-**Owner:** Campaign Operations / Tracking  
-**Input:** Approved merchant and publisher terms
+Set campaign and partner IDs, destination links, event definitions and commission rules. Test the complete journey: click, landing page, test action, attribution, commission calculation and reporting entry.
 
-1. Create the campaign and assign campaign/publisher IDs and unique tracking links or codes in the approved platform.
-2. Configure destination URL, event definition, commission logic, attribution window, postback/pixel or other approved integration, and reporting access.
-3. Run test traffic end to end: click → landing page → test conversion → correct attribution → commission calculation → dashboard record.
-4. Check mobile journey, redirects, duplication, rejected events, and any applicable consent/privacy requirements.
-5. Record test result and reviewer sign-off; distribute only approved links, copy, banners, codes, and product information.
+**Launch gate:** Tracking and the mobile journey work end to end; the reviewer has signed off. Share only approved links, copy, creatives and codes.
 
-**Gate:** Failed or unverifiable attribution blocks launch; do not rely on untested links.
+<details markdown="1"><summary>Launch and monitoring checks</summary>
 
-### Step 4 — Launch and manage the campaign
+- Test redirects, duplicate events, rejected conversions and the correct partner/campaign attribution.
+- Check the landing page, offer, campaign dates and agreed rate.
+- Record the test result and approval before launch.
+- Monitor tracking health, conversion quality, unusual spikes and broken links.
+- Pause affected activity when fraud, prohibited traffic or a material tracking failure is suspected. Record the issue, owner and restart approval.
+- Log changes to links, rates, creatives and campaign rules with written approval and an effective date.
 
-**Owner:** Campaign Operations; BD / Partnerships support
+</details>
 
-1. Issue a campaign instruction sheet covering offer, allowed channels, creative rules, start/end dates, payable action, commission, exclusions, and escalation contact.
-2. Confirm publisher activation and check that approved promotions go live as agreed. Paid search, trademark bidding, coupon use, and incentive traffic require explicit merchant permission.
-3. Monitor clicks, conversions, conversion rate, sales/lead quality, approvals, reversals, and unusual traffic patterns.
-4. Flag suspected fraud, misrepresentation, prohibited claims, suspicious spikes, or broken tracking. Pause affected activity and notify the responsible reviewer before resuming.
-5. Log changes to rates, creatives, links, or campaign rules, with effective date and written approval.
+## Validate and report
 
-**Gate:** Material campaign changes must be approved and documented before implementation.
+Reconcile tracked activity with merchant-confirmed results and eligibility rules. Separate pending, approved, rejected, reversed and disputed actions. Explain differences and agree the next steps with the merchant.
 
-### Step 5 — Validate results and report
+**Report:** Selected period, merchant, partner/channel, clicks, conversions, approval status, attributed sales where relevant, commission and unresolved items. Keep sales value, network revenue and partner payouts distinct.
 
-**Owner:** Reporting / Account Management; merchant validates payable outcomes
+<details markdown="1"><summary>Reporting measures</summary>
 
-1. Reconcile tracker data against merchant-confirmed orders/leads and the agreed eligibility rules.
-2. Separate **pending, approved, rejected, reversed, and disputed** conversions; retain reasons and evidence for exceptions.
-3. Deliver a consistent report with the selected period, merchant, publisher/channel, clicks, eligible conversions, conversion rate, attributed sales (where relevant), gross commission, and unresolved issues.
-4. Review results with the merchant; identify publishers to scale, improve, pause, or replace. Document follow-up actions and owners.
-
-**Gate:** Only approved, non-duplicated, eligible conversions enter the payable commission register.
-
-### Step 6 — Invoice, settle, and renew
-
-**Owner:** Finance, with Reporting and BD review
-
-1. Match approved conversion records to merchant billing and publisher commission calculations. Distinguish **merchant sales value** from **network revenue** and **publisher payouts**.
-2. Issue the merchant invoice in accordance with signed terms; track collections and unresolved adjustments.
-3. Release publisher payments only after the contractual validation and funding/approval requirements are satisfied. Record payout date, reference, taxes/withholdings where applicable, and any balance carried forward.
-4. Reconcile campaign-level receivables, payables, and disputes. Seek renewal or expansion only against the documented outcome and capacity.
-
-**Gate:** No payout based solely on raw tracked conversions or an unreviewed dashboard total.
-
-## 4. Non-negotiable controls
-
-- **Commercial:** Written event definitions, exclusions, rates, attribution and settlement terms; no implied guarantees.
-- **Partner quality:** Verified identity and traffic source, dated audience evidence, and explicit status; unknown data stays unknown.
-- **Tracking:** Unique IDs, tested conversion events, documented attribution, duplicate/reversal handling.
-- **Brand & conduct:** Approved claims/assets; disclosures where required; no unauthorized trademark bidding, misleading coupons, spam, or incentivized leads.
-- **Data protection:** Limit access to personal information; do not share a private roster inside a supposedly restricted public preview.
-- **Finance:** Merchant-approved results, finance sign-off, invoice-to-payout reconciliation, and documented disputes.
-
-## 5. Reporting cadence and KPIs
-
-| Cadence | Minimum review |
+| Measure | Working definition |
 |---|---|
-| During live campaigns | Tracking health, exceptions, publisher activation, urgent approvals |
-| Weekly | Merchant pipeline and next steps; partner performance; pending validations; actions |
-| Monthly / settlement cycle | Merchant-approved outcomes, billing, collections, payouts, channel economics, renewals |
+| Conversion rate | Conversions divided by matching clicks |
+| Approval rate | Approved actions divided by tracked actions |
+| Attributed sales | Merchant sales linked to eligible campaign activity |
+| Network contribution | Commission less the direct partner and campaign costs included in the report |
 
-**Core KPIs:** active merchants; verified/active publishers; clicks; conversions; conversion rate (`conversions ÷ clicks`); approval rate (`approved ÷ tracked conversions`); attributed sales where relevant; gross commission; publisher payout; network contribution **after** direct partner and campaign costs. Show missing inputs and partial periods explicitly; never label contribution as net profit without full cost coverage.
+Use matching periods and complete inputs. Show missing values and partial periods; do not describe contribution as net profit unless all costs are included.
 
-## 6. Required minimum records
+</details>
 
-1. **Merchant pipeline:** merchant ID | market/niche | stage | owner | next action/date.
-2. **Campaign brief:** campaign ID | objective | audience/market | offer | payable event | rate | attribution | exclusions | approval | launch date.
-3. **Publisher register:** publisher ID | verified channels | niche/audience evidence | permitted traffic | status | terms | reviewer.
-4. **Launch checklist:** approvals | link and test-event evidence | creatives | partner list | go-live sign-off.
-5. **Performance & settlement register:** period | publisher ID | tracked/approved/rejected events | reason | commission | invoice/payment reference | unresolved exception.
+## Settle, review and renew
 
-**Approval rule:** Campaign status moves to **Live** only when BD, Partnerships, and Tracking have completed their respective gates; settlement closes only when Reporting and Finance reconcile and approve it.
+Match approved actions to merchant invoices and partner commissions. Track collections, adjustments, disputes and payment references. Release payouts only when the contractual validation, funding and approval requirements are met.
 
----
+**Close:** Reporting and finance agree the settlement register. Retain the brief, partner approvals, test records, performance report, invoice and payout evidence. Base renewal discussions on the reviewed results and delivery capacity.
 
-### Source and adoption note
+<details markdown="1"><summary>Operating rhythm and minimum registers</summary>
 
-This is a **proposed concise operating SOP**, not evidence that every control is already approved or implemented by GWO SEVO. It condenses the supplied *Affiliate and Creator Network: Build Record and Replication SOP* (merchant pipeline, roster verification, campaign launch, and reporting) and *Affiliate Marketing — Knowledgebase* slides (advertiser/network/publisher roles; affiliate types; CPS/CPL/CPA and related models; tracking and commission flow; fraud and reporting controls, especially slides 4–17 and 36–41). Specific tools, rates, payment timelines, budgets, and internal authorization limits must be set per contract and internal approval.
+**During live campaigns:** Check tracking, exceptions and urgent approvals.
+
+**Weekly:** Review pipeline next steps, partner activation, performance and pending validations.
+
+**Each settlement cycle:** Reconcile approved results, invoices, collections, payouts and unresolved balances.
+
+Maintain five linked records: merchant pipeline; campaign brief; partner register; launch checklist; performance and settlement register. Give every open item an owner and next-action date.
+
+</details>

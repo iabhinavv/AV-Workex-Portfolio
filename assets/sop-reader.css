@@ -1,0 +1,60 @@
+/* Concise process guides, with the longer checks available on demand. */
+.document-author { font-size:.88rem;color:var(--muted);margin-top:20px }
+.document-actions { display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:24px }
+.document-actions .btn { font-size:.85rem;min-height:44px;padding:10px 17px }
+.document-print-hint { color:var(--muted);font-size:.8rem;margin-top:12px }
+.sop-content details { border:1px solid var(--line);border-radius:9px;background:var(--void);margin:22px 0;padding:0 18px }
+.sop-content details summary { cursor:pointer;padding:17px 0;font:600 .9rem/1.55 var(--display);color:var(--text);overflow-wrap:anywhere }
+.sop-content details[open] summary { border-bottom:1px solid var(--line);margin-bottom:19px }
+.sop-content details>:last-child { margin-bottom:18px }
+.sop-content details p,.sop-content details li { font-size:.92rem }
+.sop-content details .table-scroll { margin:18px 0 }
+.sop-content h2 { font-size:clamp(1.6rem,2.8vw,2rem);line-height:1.18;margin-top:38px }
+.sop-content h2:first-child { margin-top:0 }
+.sop-print-footer,.sop-print-watermark { display:none }
+@media(max-width:740px) {
+  .document-actions { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch }
+  .document-actions .btn { padding:11px 12px;font-size:.79rem;text-align:center;justify-content:center }
+  .sop-content details { padding:0 13px }
+  .sop-content details summary { font-size:.87rem }
+  .document-layout { gap:18px }
+  .document-print-hint { line-height:1.6 }
+}
+@media print {
+  @page { size:A4;margin:18mm 17mm 26mm }
+  .document-main { max-width:none;padding:0!important;margin:0 }
+  .document-header { max-width:none;padding-bottom:14pt;border-bottom:1px solid #b7c2ca }
+  .document-header h1 { font-size:25pt;line-height:1.12;margin:8pt 0 10pt }
+  .document-header .lede { font-size:10pt;line-height:1.5 }
+  .document-header .company-mark { height:44pt!important;margin-bottom:12pt }
+  .document-header .company-mark img { width:44pt!important;height:44pt!important;max-height:44pt!important }
+  .document-header .eyebrow { font-size:8pt }
+  .document-author { font-size:9pt;margin-top:9pt }
+  .document-actions,.document-print-hint,.document-contents,.document-return,.document-attribution,.footer { display:none!important }
+  .document-layout { display:block;padding-top:12pt }
+  .sop-content { max-width:none;border:0;border-radius:0;padding:0;background:transparent }
+  .sop-content,.sop-content p,.sop-content li { font-size:10pt;line-height:1.5;color:#111 }
+  .sop-content h2 { font-size:15pt;line-height:1.2;margin:20pt 0 9pt;break-after:avoid }
+  .sop-content h3 { font-size:11pt;line-height:1.3;break-after:avoid }
+  .sop-content p,.sop-content ul,.sop-content ol { margin-bottom:9pt;orphans:3;widows:3 }
+  .sop-content li { margin-bottom:4pt }
+  .sop-content details { display:block;background:transparent;border:0;border-top:1px solid #d9e0e5;border-radius:0;padding:0;margin:12pt 0;break-inside:auto }
+  .sop-content details summary { display:block;font-size:11pt;padding:9pt 0;color:#111;break-after:avoid }
+  .sop-content details[open] summary { border:0;margin:0 }
+  .sop-content details summary::marker,.sop-content details summary::-webkit-details-marker { display:none;content:"" }
+  .sop-content details::details-content { content-visibility:visible!important;display:block!important }
+  .sop-content details>:not(summary) { display:block!important }
+  .sop-content details p,.sop-content details li { font-size:10pt }
+  .table-scroll { overflow:visible!important;border:0;border-radius:0;margin:12pt 0 }
+  .sop-content table { min-width:0!important;width:100%;table-layout:fixed;font-size:9pt }
+  .sop-content thead { display:table-header-group }
+  .sop-content th,.sop-content td { padding:6pt;border:1px solid #b7c2ca;overflow-wrap:anywhere }
+  .sop-content th { background:#eef1f3!important;color:#111!important }
+  .sop-content tr { break-inside:avoid }
+  .sop-content a { color:#111;text-decoration:underline }
+  .sop-content .motion-pending,.sop-content .motion-enter { opacity:1!important;transform:none!important;animation:none!important }
+  .sop-print-watermark { display:block;position:fixed;left:50%;top:43%;transform:translate(-50%,-50%) rotate(-32deg);font:700 48pt/1 var(--display);white-space:nowrap;color:#000;opacity:.055;pointer-events:none;z-index:10 }
+  .sop-print-footer { display:block;position:fixed;bottom:-18mm;left:0;right:0;padding-top:6pt;border-top:1px solid #b7c2ca;font:8pt/1.6 Arial,sans-serif;color:#111;z-index:11 }
+  .sop-print-footer strong { display:block;font-size:9pt }
+  .sop-print-footer a { color:#111;text-decoration:none;white-space:nowrap }
+}
